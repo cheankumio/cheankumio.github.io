@@ -15,18 +15,18 @@
 
 
 
-<meta name="description" content="RxJava &amp;amp; RxAndroid###RxJava的基本認知RxJava 重要的核心概念為Observables和Subscribers  Observables &amp;gt; 被觀察者 Subscribers &amp;gt; 訂閱者  舉例來說，你可以訂閱某部落格(Observables)，而當部落格發文時，訂閱者(Subscribers)就會收到通知。  而這個概念就是異步(Async)。">
-<meta name="keywords" content="RxJava;Android">
+<meta name="description" content="RxJava &amp;amp; RxAndroidRxJava的基本認知RxJava 重要的核心概念為Observables和Subscribers  Observables &amp;gt; 被觀察者 Subscribers &amp;gt; 訂閱者  舉例來說，你可以訂閱某部落格(Observables)，而當部落格發文時，訂閱者(Subscribers)就會收到通知。  而這個概念就是異步(Async)。">
+<meta name="keywords" content="RxJava,Android">
 <meta property="og:type" content="article">
 <meta property="og:title" content="RxJava">
 <meta property="og:url" content="https://cheankumio.github.io/2017/08/07/RxJava/index.html">
 <meta property="og:site_name" content="K.L. Developer Blog">
-<meta property="og:description" content="RxJava &amp;amp; RxAndroid###RxJava的基本認知RxJava 重要的核心概念為Observables和Subscribers  Observables &amp;gt; 被觀察者 Subscribers &amp;gt; 訂閱者  舉例來說，你可以訂閱某部落格(Observables)，而當部落格發文時，訂閱者(Subscribers)就會收到通知。  而這個概念就是異步(Async)。">
+<meta property="og:description" content="RxJava &amp;amp; RxAndroidRxJava的基本認知RxJava 重要的核心概念為Observables和Subscribers  Observables &amp;gt; 被觀察者 Subscribers &amp;gt; 訂閱者  舉例來說，你可以訂閱某部落格(Observables)，而當部落格發文時，訂閱者(Subscribers)就會收到通知。  而這個概念就是異步(Async)。">
 <meta property="og:locale" content="zh-Hant-TW">
-<meta property="og:updated_time" content="2017-08-07T01:24:51.937Z">
+<meta property="og:updated_time" content="2017-08-07T01:33:16.500Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="RxJava">
-<meta name="twitter:description" content="RxJava &amp;amp; RxAndroid###RxJava的基本認知RxJava 重要的核心概念為Observables和Subscribers  Observables &amp;gt; 被觀察者 Subscribers &amp;gt; 訂閱者  舉例來說，你可以訂閱某部落格(Observables)，而當部落格發文時，訂閱者(Subscribers)就會收到通知。  而這個概念就是異步(Async)。">
+<meta name="twitter:description" content="RxJava &amp;amp; RxAndroidRxJava的基本認知RxJava 重要的核心概念為Observables和Subscribers  Observables &amp;gt; 被觀察者 Subscribers &amp;gt; 訂閱者  舉例來說，你可以訂閱某部落格(Observables)，而當部落格發文時，訂閱者(Subscribers)就會收到通知。  而這個概念就是異步(Async)。">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -183,7 +183,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/RxJava-Android/">RxJava;Android</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RxJava/">RxJava</a></li></ul>
                     </div>
                 </section>
                 
@@ -279,10 +279,14 @@
       
       <div class="article-info article-info-post">
         
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Android/">Android</a>
+    </div>
+
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RxJava-Android/">RxJava;Android</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RxJava/">RxJava</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -292,7 +296,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="RxJava-amp-RxAndroid"><a href="#RxJava-amp-RxAndroid" class="headerlink" title="RxJava &amp; RxAndroid"></a>RxJava &amp; RxAndroid</h2><p>###RxJava的基本認知<br>RxJava 重要的核心概念為Observables和Subscribers</p>
+        <h2 id="RxJava-amp-RxAndroid"><a href="#RxJava-amp-RxAndroid" class="headerlink" title="RxJava &amp; RxAndroid"></a>RxJava &amp; RxAndroid</h2><p><strong>RxJava的基本認知</strong><br>RxJava 重要的核心概念為Observables和Subscribers</p>
 <ul>
 <li>Observables &gt; 被觀察者</li>
 <li>Subscribers &gt; 訂閱者</li>
@@ -307,7 +311,7 @@
 <p>當被觀察者和訂閱者都建立之後，被觀察者需要設定發布對象(訊息要丟給哪一個訂閱者)</p>
 <p><strong>註冊訂閱者</strong><br>observable.subscribe(subscriber);<br>如此一來，當observable進行資料處理完畢之後，subscriber就會馬上得到通知，並且進行相應的處理。</p>
 <h4 id="簡化"><a href="#簡化" class="headerlink" title="簡化"></a>簡化</h4><p>當你理解前面的概念後，可以更簡單的使用</p>
-<p>####以下方法也能實現上面的功能</p>
+<p><strong>以下方法也能實現上面的功能</strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 建立被觀察者</span></div><div class="line">Observable&lt;String&gt; observable = Observable.just(<span class="string">"Hello World"</span>);</div><div class="line"></div><div class="line"><span class="comment">// 建立訂閱者</span></div><div class="line">Action1&lt;String&gt; action1 = <span class="keyword">new</span> Action1&lt;String&gt;() &#123;</div><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">call</span><span class="params">(String s)</span> </span>&#123;</div><div class="line">printlog(s);</div><div class="line">&#125;</div><div class="line">&#125;;</div><div class="line">observable.subscribe(action1);</div></pre></td></tr></table></figure>
 <p>其中Action也可以定義 onNext、onError、onCompleted</p>
 <blockquote>
@@ -326,7 +330,7 @@
         <p><span>本文標題:</span><a href="/2017/08/07/RxJava/">RxJava</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主頁">KuanLin</a></p>
         <p><span>發布時間:</span>2017-08-07, 09:12:08</p>
-        <p><span>最後更新:</span>2017-08-07, 09:24:51</p>
+        <p><span>最後更新:</span>2017-08-07, 09:33:16</p>
         <p>
             <span>原始鏈接:</span><a class="post-url" href="/2017/08/07/RxJava/" title="RxJava">https://cheankumio.github.io/2017/08/07/RxJava/</a>
             <span class="copy-path" data-clipboard-text="原文: https://cheankumio.github.io/2017/08/07/RxJava/　　作者: KuanLin" title="點擊複製文章鏈接"><i class="fa fa-clipboard"></i></span>
