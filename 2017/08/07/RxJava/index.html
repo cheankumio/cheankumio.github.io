@@ -15,17 +15,18 @@
 
 
 
-<meta name="description" content="該Blog於2017/07/20開始啟用，我希望能在這裡把工程師這條路上的波折、經驗都給紀錄進來。 關於我">
-<meta property="og:type" content="website">
-<meta property="og:title" content="about me">
-<meta property="og:url" content="https://cheankumio.github.io/about/index.html">
+<meta name="description" content="RxJava &amp;amp; RxAndroid#####RxJava的基本認知RxJava 重要的核心概念為Observables和Subscribers  Observables &amp;gt; 被觀察者 Subscribers &amp;gt; 訂閱者  舉例來說，你可以訂閱某部落格(Observables)，而當部落格發文時，訂閱者(Subscribers)就會收到通知。  而這個概念就是異步(Async)">
+<meta name="keywords" content="RxJava,Android">
+<meta property="og:type" content="article">
+<meta property="og:title" content="RxJava">
+<meta property="og:url" content="https://cheankumio.github.io/2017/08/07/RxJava/index.html">
 <meta property="og:site_name" content="K.L. Developer Blog">
-<meta property="og:description" content="該Blog於2017/07/20開始啟用，我希望能在這裡把工程師這條路上的波折、經驗都給紀錄進來。 關於我">
+<meta property="og:description" content="RxJava &amp;amp; RxAndroid#####RxJava的基本認知RxJava 重要的核心概念為Observables和Subscribers  Observables &amp;gt; 被觀察者 Subscribers &amp;gt; 訂閱者  舉例來說，你可以訂閱某部落格(Observables)，而當部落格發文時，訂閱者(Subscribers)就會收到通知。  而這個概念就是異步(Async)">
 <meta property="og:locale" content="zh-Hant-TW">
-<meta property="og:updated_time" content="2017-07-20T08:15:54.235Z">
+<meta property="og:updated_time" content="2017-08-07T01:16:44.131Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about me">
-<meta name="twitter:description" content="該Blog於2017/07/20開始啟用，我希望能在這裡把工程師這條路上的波折、經驗都給紀錄進來。 關於我">
+<meta name="twitter:title" content="RxJava">
+<meta name="twitter:description" content="RxJava &amp;amp; RxAndroid#####RxJava的基本認知RxJava 重要的核心概念為Observables和Subscribers  Observables &amp;gt; 被觀察者 Subscribers &amp;gt; 訂閱者  舉例來說，你可以訂閱某部落格(Observables)，而當部落格發文時，訂閱者(Subscribers)就會收到通知。  而這個概念就是異步(Async)">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -57,7 +58,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>about me | K.L. Developer Blog</title>
+<title>RxJava | K.L. Developer Blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -67,7 +68,7 @@
         fancybox: true,
         animate: true,
         isHome: false,
-        isPost: false,
+        isPost: true,
         isArchive: false,
         isTag: false,
         isCategory: false,
@@ -251,11 +252,11 @@
     </div>
     <link class="menu-list" tags="標籤" friends="友情鏈接" about="關於我"/>
 </nav>
-      <div class="body-wrap"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-RxJava" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/about/index.html" class="article-date">
-      <time datetime="2017-07-20T07:14:29.000Z" itemprop="datePublished">2017-07-20</time>
+      <a href="/2017/08/07/RxJava/" class="article-date">
+      <time datetime="2017-08-07T01:12:08.000Z" itemprop="datePublished">2017-08-07</time>
 </a>
 
 
@@ -270,7 +271,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      about me
+      RxJava
     </h1>
   
 
@@ -280,6 +281,10 @@
         
 
         
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RxJava-Android/">RxJava,Android</a></li></ul>
+    </div>
+
         <div class="clearfix"></div>
       </div>
       
@@ -287,37 +292,95 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <style>
-    .article-meta { display: none; }
-    #container .article .article-title { padding-right: 0; }
-    .article-header {
-        padding: 0;
-        padding-top: 26px;
-        border-left: none;
-        text-align: center;
-    }
-    .article-header:hover { border-left: none; }
-    .article-title { font-size: 1.6em }
-    .article-entry hr { margin: 0;}
-    .article-meta,
-    #container .article-info-post.article-info { display: none;}
-    #container .article .article-title { padding: 0; }
-</style>
+        <h2 id="RxJava-amp-RxAndroid"><a href="#RxJava-amp-RxAndroid" class="headerlink" title="RxJava &amp; RxAndroid"></a>RxJava &amp; RxAndroid</h2><p>#####RxJava的基本認知<br>RxJava 重要的核心概念為Observables和Subscribers</p>
+<ul>
+<li>Observables &gt; 被觀察者</li>
+<li>Subscribers &gt; 訂閱者</li>
+</ul>
+<p>舉例來說，你可以訂閱某部落格(Observables)，而當部落格發文時，訂閱者(Subscribers)就會收到通知。</p>
+<blockquote>
+<p>而這個概念就是異步(Async)。</p>
+</blockquote>
+<p>+<a id="more"></a></p>
+<h4 id="RxJava的操作方式"><a href="#RxJava的操作方式" class="headerlink" title="RxJava的操作方式"></a>RxJava的操作方式</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 建立被觀察者</span></div><div class="line">Observable&lt;String&gt; observable = Observable.create(</div><div class="line"><span class="keyword">new</span> Observable.OnSubscribe&lt;String&gt;()&#123;</div><div class="line"></div><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">call</span><span class="params">(Subscriber&lt;? <span class="keyword">super</span> String&gt; subscriber)</span> </span>&#123;</div><div class="line"><span class="comment">// 執行</span></div><div class="line">subscriber.onNext(<span class="string">"Hello World"</span>);</div><div class="line">subscriber.onCompleted();</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line">);</div></pre></td></tr></table></figure>
+<p>建立被觀察者後，還需要有訂閱者<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 建立訂閱者</span></div><div class="line">Subscriber&lt;String&gt; subscriber = <span class="keyword">new</span> Subscriber&lt;String&gt;() &#123;</div><div class="line"><span class="comment">// 當觀察者執行完畢後，會告知訂閱者並執行onCompleted</span></div><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onCompleted</span><span class="params">()</span> </span>&#123;</div><div class="line">printlog(<span class="string">"OnCompleted"</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onError</span><span class="params">(Throwable e)</span> </span>&#123;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 觀察者發布onNext時，訂閱者接收後的處理</span></div><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onNext</span><span class="params">(String s)</span> </span>&#123;</div><div class="line">printlog(s);</div><div class="line">&#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<p>當被觀察者和訂閱者都建立之後，被觀察者需要設定發布對象(訊息要丟給哪一個訂閱者)</p>
+<p>// 註冊訂閱者<br>observable.subscribe(subscriber);<br>如此一來，當observable進行資料處理完畢之後，subscriber就會馬上得到通知，並且進行相應的處理。</p>
+<h3 id="簡化"><a href="#簡化" class="headerlink" title="簡化"></a>簡化</h3><p>當你理解前面的概念後，可以更簡單的使用</p>
+<p>####以下方法也能實現上面的功能</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 建立被觀察者</span></div><div class="line">Observable&lt;String&gt; observable = Observable.just(<span class="string">"Hello World"</span>);</div><div class="line"></div><div class="line"><span class="comment">// 建立訂閱者</span></div><div class="line">Action1&lt;String&gt; action1 = <span class="keyword">new</span> Action1&lt;String&gt;() &#123;</div><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">call</span><span class="params">(String s)</span> </span>&#123;</div><div class="line">printlog(s);</div><div class="line">&#125;</div><div class="line">&#125;;</div><div class="line">observable.subscribe(action1);</div></pre></td></tr></table></figure>
+<p>其中Action也可以定義 onNext、onError、onCompleted</p>
+<blockquote>
+<p>上面是簡化後的被觀察者與訂閱者可讀性較高的寫法<br>以下將使用另一種方式呈現更簡化的寫法</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Observablel.just(<span class="string">"Hello world"</span>).subscribe(<span class="keyword">new</span> Action1&lt;String&gt;()&#123;</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">call</span><span class="params">(String s)</span></span>&#123;</div><div class="line">System.out.println(s);</div><div class="line">&#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>以上基本操作介紹完畢!</p>
 
-
-          
-        <p>該Blog於2017/07/20開始啟用，我希望能在這裡把工程師這條路上的波折、經驗都給紀錄進來。</p>
-<h2 id="關於我"><a href="#關於我" class="headerlink" title="關於我"></a>關於我</h2>
       
     </div>
     
   </div>
   
     
+    <div class="copyright">
+        <p><span>本文標題:</span><a href="/2017/08/07/RxJava/">RxJava</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主頁">KuanLin</a></p>
+        <p><span>發布時間:</span>2017-08-07, 09:12:08</p>
+        <p><span>最後更新:</span>2017-08-07, 09:16:44</p>
+        <p>
+            <span>原始鏈接:</span><a class="post-url" href="/2017/08/07/RxJava/" title="RxJava">https://cheankumio.github.io/2017/08/07/RxJava/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://cheankumio.github.io/2017/08/07/RxJava/　　作者: KuanLin" title="點擊複製文章鏈接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>許可協議:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"姓名標示-非商業性-相同方式分享 4.0 國際"</a> 轉載請保留原文鏈接及作者。
+        </p>
+    </div>
 
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2017/08/07/RxJava-Thread-Control/">
+                    RxJava_Thread_Control
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2017/07/20/MyFirstPost/">
+                    MyFirstPost
+                </a>
+            </div>
+        
+    </nav>
 
   
 </article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目錄</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#RxJava-amp-RxAndroid"><span class="toc-number">1.</span> <span class="toc-text">RxJava & RxAndroid</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#RxJava的操作方式"><span class="toc-number">1.0.1.</span> <span class="toc-text">RxJava的操作方式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#簡化"><span class="toc-number">1.1.</span> <span class="toc-text">簡化</span></a></li></ol></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隱藏目錄"  title="點擊按鈕隱藏或者顯示文章目錄">
+
+    <script>
+        yiliaConfig.toc = ["隱藏目錄", "顯示目錄", !!"false"];
+    </script>
 
 
 
@@ -335,7 +398,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"about me　| K.L. Developer Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"RxJava　| K.L. Developer Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -350,6 +413,26 @@
 
     
 
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2017/08/07/RxJava-Thread-Control/" title="上一篇: RxJava_Thread_Control">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2017/07/20/MyFirstPost/" title="下一篇: MyFirstPost">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/08/07/RxJava-Thread-Control/">RxJava_Thread_Control</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/07/RxJava/">RxJava</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/20/MyFirstPost/">MyFirstPost</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/20/hello-world/">Hello World</a></li></ul>
 
 
 

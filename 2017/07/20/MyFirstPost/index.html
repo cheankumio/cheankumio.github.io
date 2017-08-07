@@ -15,17 +15,17 @@
 
 
 
-<meta name="description" content="First Post The Blog Built in 2017/7/20  Is the First Post in this blog.I want to say &amp;#39; Hello World &amp;#39; !! 1234public void say(String)&amp;#123;	System.out.print(String);&amp;#125;">
+<meta name="description" content="First Post The Blog Built in 2017/7/20  Is the First Post in this blog.I want to say &amp;#39; Hello World &amp;#39; !! 1234public void say(String str)&amp;#123;	System.out.print(str);&amp;#125;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MyFirstPost">
 <meta property="og:url" content="https://cheankumio.github.io/2017/07/20/MyFirstPost/index.html">
 <meta property="og:site_name" content="K.L. Developer Blog">
-<meta property="og:description" content="First Post The Blog Built in 2017/7/20  Is the First Post in this blog.I want to say &amp;#39; Hello World &amp;#39; !! 1234public void say(String)&amp;#123;	System.out.print(String);&amp;#125;">
+<meta property="og:description" content="First Post The Blog Built in 2017/7/20  Is the First Post in this blog.I want to say &amp;#39; Hello World &amp;#39; !! 1234public void say(String str)&amp;#123;	System.out.print(str);&amp;#125;">
 <meta property="og:locale" content="zh-Hant-TW">
-<meta property="og:updated_time" content="2017-07-20T08:25:33.461Z">
+<meta property="og:updated_time" content="2017-07-20T08:29:07.091Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MyFirstPost">
-<meta name="twitter:description" content="First Post The Blog Built in 2017/7/20  Is the First Post in this blog.I want to say &amp;#39; Hello World &amp;#39; !! 1234public void say(String)&amp;#123;	System.out.print(String);&amp;#125;">
+<meta name="twitter:description" content="First Post The Blog Built in 2017/7/20  Is the First Post in this blog.I want to say &amp;#39; Hello World &amp;#39; !! 1234public void say(String str)&amp;#123;	System.out.print(str);&amp;#125;">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -73,7 +73,7 @@
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-        search: undefined
+        search: true
     }
 </script>
 
@@ -108,6 +108,13 @@
         
 
         
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
+        
 
 
         
@@ -128,11 +135,6 @@
                         </div>
                         
                         
-                        <div class="icon-wrap icon-me hide" data-idx="3">
-                            <div class="user"></div>
-                            <div class="shoulder"></div>
-                        </div>
-                        
                     </div>
                     
                 </div>
@@ -144,8 +146,6 @@
                         
                         <li>友情鏈接</li>
                         
-                        
-                        <li>關於我</li>
                         
                     </ul>
                 </div>
@@ -182,7 +182,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/RxJava-Android/">RxJava, Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RxJava-Android/">RxJava,Android</a></li></ul>
                     </div>
                 </section>
                 
@@ -201,12 +201,6 @@
                 </section>
                 
 
-                
-                
-                <section class="switch-part switch-part4">
-                
-                    <div id="js-aboutme">专注于前端</div>
-                </section>
                 
             </div>
         </div>
@@ -297,7 +291,7 @@
 <p>The Blog Built in 2017/7/20</p>
 </blockquote>
 <p>Is the First Post in this blog.<br>I want to say <code>&#39; Hello World &#39;</code> !!</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">say</span><span class="params">(String)</span></span></div><div class="line">&#123;</div><div class="line">	System.out.print(String);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">say</span><span class="params">(String str)</span></span></div><div class="line">&#123;</div><div class="line">	System.out.print(str);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
     
@@ -308,7 +302,7 @@
         <p><span>本文標題:</span><a href="/2017/07/20/MyFirstPost/">MyFirstPost</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主頁">KuanLin</a></p>
         <p><span>發布時間:</span>2017-07-20, 15:21:40</p>
-        <p><span>最後更新:</span>2017-07-20, 16:25:33</p>
+        <p><span>最後更新:</span>2017-07-20, 16:29:07</p>
         <p>
             <span>原始鏈接:</span><a class="post-url" href="/2017/07/20/MyFirstPost/" title="MyFirstPost">https://cheankumio.github.io/2017/07/20/MyFirstPost/</a>
             <span class="copy-path" data-clipboard-text="原文: https://cheankumio.github.io/2017/07/20/MyFirstPost/　　作者: KuanLin" title="點擊複製文章鏈接"><i class="fa fa-clipboard"></i></span>
@@ -322,6 +316,12 @@
 
 
     <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2017/08/07/RxJava/">
+                    RxJava
+                </a>
+            </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
@@ -394,7 +394,9 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="回到主頁"><i class="fa fa-home"></i></a>
+            <a href="/2017/08/07/RxJava/" title="上一篇: RxJava">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
@@ -406,7 +408,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/07/20/MyFirstPost/">MyFirstPost</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/20/hello-world/">Hello World</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/08/07/RxJava-Thread-Control/">RxJava_Thread_Control</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/07/RxJava/">RxJava</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/20/MyFirstPost/">MyFirstPost</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/20/hello-world/">Hello World</a></li></ul>
 
 
 
@@ -420,7 +422,7 @@
         <div id="footer-info">
             <div class="footer-left">
                 <i class="fa fa-copyright"></i> 
-                2016-2017 KuanLin
+                2017 KuanLin
             </div>
             <div class="footer-right">
                 <a href="http://hexo.io/" target="_blank" title="快速、簡單且強大的網誌框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="簡而不減 Hexo 雙欄網誌主題  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
