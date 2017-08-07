@@ -16,14 +16,14 @@
 
 
 <meta name="description" content="RxJava 線程控制1234567891011121314// 在當前線程運行Schedulers.immediate()// 總是開啟新線程，並在新線程執行Schedulers.newThread()// io操作(讀寫文件、網路交互)，類似newThread，區別在於io()內部為無數量上限的線程池，因此多數情況下io()比newThread更有效率(建議不要將計算工作放在io()中)Sch">
-<meta name="keywords" content="RxJava, Android">
+<meta name="keywords" content="RxJava;Android">
 <meta property="og:type" content="article">
 <meta property="og:title" content="RxJava_Thread_Control">
 <meta property="og:url" content="https://cheankumio.github.io/2017/08/07/RxJava-Thread-Control/index.html">
 <meta property="og:site_name" content="K.L. Developer Blog">
 <meta property="og:description" content="RxJava 線程控制1234567891011121314// 在當前線程運行Schedulers.immediate()// 總是開啟新線程，並在新線程執行Schedulers.newThread()// io操作(讀寫文件、網路交互)，類似newThread，區別在於io()內部為無數量上限的線程池，因此多數情況下io()比newThread更有效率(建議不要將計算工作放在io()中)Sch">
 <meta property="og:locale" content="zh-Hant-TW">
-<meta property="og:updated_time" content="2017-08-07T01:17:24.981Z">
+<meta property="og:updated_time" content="2017-08-07T01:24:57.772Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="RxJava_Thread_Control">
 <meta name="twitter:description" content="RxJava 線程控制1234567891011121314// 在當前線程運行Schedulers.immediate()// 總是開啟新線程，並在新線程執行Schedulers.newThread()// io操作(讀寫文件、網路交互)，類似newThread，區別在於io()內部為無數量上限的線程池，因此多數情況下io()比newThread更有效率(建議不要將計算工作放在io()中)Sch">
@@ -183,7 +183,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/RxJava-Android/">RxJava, Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RxJava-Android/">RxJava,Android</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/RxJava-Android/">RxJava;Android</a></li></ul>
                     </div>
                 </section>
                 
@@ -282,7 +282,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RxJava-Android/">RxJava, Android</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RxJava-Android/">RxJava;Android</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -293,8 +293,8 @@
       
           
         <h2 id="RxJava-線程控制"><a href="#RxJava-線程控制" class="headerlink" title="RxJava 線程控制"></a>RxJava 線程控制</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 在當前線程運行</span></div><div class="line">Schedulers.immediate()</div><div class="line"></div><div class="line"><span class="comment">// 總是開啟新線程，並在新線程執行</span></div><div class="line">Schedulers.newThread()</div><div class="line"></div><div class="line"><span class="comment">// io操作(讀寫文件、網路交互)，類似newThread，區別在於io()內部為無數量上限的線程池，因此多數情況下io()比newThread更有效率(建議不要將計算工作放在io()中)</span></div><div class="line">Schedulers.io()</div><div class="line"></div><div class="line"><span class="comment">// 進行計算工作所使用的Scheduler</span></div><div class="line">Schedulers.computation()</div><div class="line"></div><div class="line"><span class="comment">// 切換線程至主線程</span></div><div class="line">AndroidSchedulers.mainThread()</div></pre></td></tr></table></figure>
-<p>+<a id="more"></a></p>
-<h3 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h3><h6 id="AndroidSchedulers-mainThread-範例"><a href="#AndroidSchedulers-mainThread-範例" class="headerlink" title="AndroidSchedulers.mainThread() 範例"></a>AndroidSchedulers.mainThread() 範例</h6><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 三秒後切換Activity</span></div><div class="line">Observable.timer(<span class="number">3</span>, TimeUnit.SECONDS)</div><div class="line"><span class="comment">// 執行在主線程</span></div><div class="line">.observeOn(AndroidSchedulers.mainThread())</div><div class="line">.subscribe(aLong -&gt;</div><div class="line">&#123;</div><div class="line">startActivity(<span class="keyword">new</span> Intent().setClass(<span class="keyword">this</span>,SecondActivity.class));</div><div class="line">finish();</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h3><h4 id="AndroidSchedulers-mainThread-範例"><a href="#AndroidSchedulers-mainThread-範例" class="headerlink" title="AndroidSchedulers.mainThread() 範例"></a>AndroidSchedulers.mainThread() 範例</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 三秒後切換Activity</span></div><div class="line">Observable.timer(<span class="number">3</span>, TimeUnit.SECONDS)</div><div class="line"><span class="comment">// 執行在主線程</span></div><div class="line">.observeOn(AndroidSchedulers.mainThread())</div><div class="line">.subscribe(aLong -&gt;</div><div class="line">&#123;</div><div class="line">startActivity(<span class="keyword">new</span> Intent().setClass(<span class="keyword">this</span>,SecondActivity.class));</div><div class="line">finish();</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -306,7 +306,7 @@
         <p><span>本文標題:</span><a href="/2017/08/07/RxJava-Thread-Control/">RxJava_Thread_Control</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主頁">KuanLin</a></p>
         <p><span>發布時間:</span>2017-08-07, 09:15:24</p>
-        <p><span>最後更新:</span>2017-08-07, 09:17:24</p>
+        <p><span>最後更新:</span>2017-08-07, 09:24:57</p>
         <p>
             <span>原始鏈接:</span><a class="post-url" href="/2017/08/07/RxJava-Thread-Control/" title="RxJava_Thread_Control">https://cheankumio.github.io/2017/08/07/RxJava-Thread-Control/</a>
             <span class="copy-path" data-clipboard-text="原文: https://cheankumio.github.io/2017/08/07/RxJava-Thread-Control/　　作者: KuanLin" title="點擊複製文章鏈接"><i class="fa fa-clipboard"></i></span>
@@ -336,7 +336,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目錄</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#RxJava-線程控制"><span class="toc-number">1.</span> <span class="toc-text">RxJava 線程控制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#範例"><span class="toc-number">1.1.</span> <span class="toc-text">範例</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#AndroidSchedulers-mainThread-範例"><span class="toc-number">1.1.0.0.1.</span> <span class="toc-text">AndroidSchedulers.mainThread() 範例</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#RxJava-線程控制"><span class="toc-number">1.</span> <span class="toc-text">RxJava 線程控制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#範例"><span class="toc-number">1.1.</span> <span class="toc-text">範例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#AndroidSchedulers-mainThread-範例"><span class="toc-number">1.1.1.</span> <span class="toc-text">AndroidSchedulers.mainThread() 範例</span></a></li></ol></li></ol></li></ol>
         
     </div>
     <style>

@@ -186,7 +186,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/RxJava-Android/">RxJava, Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RxJava-Android/">RxJava,Android</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/RxJava-Android/">RxJava;Android</a></li></ul>
                     </div>
                 </section>
                 
@@ -287,7 +287,6 @@
       
           
               <h2 id="RxJava-線程控制"><a href="#RxJava-線程控制" class="headerlink" title="RxJava 線程控制"></a>RxJava 線程控制</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 在當前線程運行</span></div><div class="line">Schedulers.immediate()</div><div class="line"></div><div class="line"><span class="comment">// 總是開啟新線程，並在新線程執行</span></div><div class="line">Schedulers.newThread()</div><div class="line"></div><div class="line"><span class="comment">// io操作(讀寫文件、網路交互)，類似newThread，區別在於io()內部為無數量上限的線程池，因此多數情況下io()比newThread更有效率(建議不要將計算工作放在io()中)</span></div><div class="line">Schedulers.io()</div><div class="line"></div><div class="line"><span class="comment">// 進行計算工作所使用的Scheduler</span></div><div class="line">Schedulers.computation()</div><div class="line"></div><div class="line"><span class="comment">// 切換線程至主線程</span></div><div class="line">AndroidSchedulers.mainThread()</div></pre></td></tr></table></figure>
-<p>+
           
       
     </div>
@@ -298,7 +297,7 @@
 
       
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RxJava-Android/">RxJava, Android</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RxJava-Android/">RxJava;Android</a></li></ul>
     </div>
 
       
@@ -351,7 +350,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <h2 id="RxJava-amp-RxAndroid"><a href="#RxJava-amp-RxAndroid" class="headerlink" title="RxJava &amp; RxAndroid"></a>RxJava &amp; RxAndroid</h2><p>#####RxJava的基本認知<br>RxJava 重要的核心概念為Observables和Subscribers</p>
+              <h2 id="RxJava-amp-RxAndroid"><a href="#RxJava-amp-RxAndroid" class="headerlink" title="RxJava &amp; RxAndroid"></a>RxJava &amp; RxAndroid</h2><p>###RxJava的基本認知<br>RxJava 重要的核心概念為Observables和Subscribers</p>
 <ul>
 <li>Observables &gt; 被觀察者</li>
 <li>Subscribers &gt; 訂閱者</li>
@@ -360,7 +359,6 @@
 <blockquote>
 <p>而這個概念就是異步(Async)。</p>
 </blockquote>
-<p>+
           
       
     </div>
@@ -371,7 +369,7 @@
 
       
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RxJava-Android/">RxJava,Android</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RxJava-Android/">RxJava;Android</a></li></ul>
     </div>
 
       
