@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="KuanLin" />
+
+
+
+<meta name="description" content="Button 按鈕設計12345&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&amp;gt;&amp;lt;selector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&amp;gt;	&amp;lt;item android:drawable=&quot;@color/filters_buttons_selected&quot; andr">
+<meta name="keywords" content="Android,Button,Design">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Button Style Design">
+<meta property="og:url" content="https://cheankumio.github.io/2017/11/06/Button-Style-Design/index.html">
+<meta property="og:site_name" content="K.L. Developer Blog">
+<meta property="og:description" content="Button 按鈕設計12345&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&amp;gt;&amp;lt;selector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&amp;gt;	&amp;lt;item android:drawable=&quot;@color/filters_buttons_selected&quot; andr">
+<meta property="og:locale" content="zh-Hant-TW">
+<meta property="og:image" content="https://cheankumio.gitbooks.io/kenny-code/content/assets/20170822_101548.gif">
+<meta property="og:image" content="https://cheankumio.gitbooks.io/kenny-code/content/assets/20170822_104509.gif">
+<meta property="og:image" content="https://cheankumio.gitbooks.io/kenny-code/content/assets/20170822_105739.gif">
+<meta property="og:image" content="https://cheankumio.gitbooks.io/kenny-code/content/assets/20170822_110918.gif">
+<meta property="og:updated_time" content="2017-11-06T07:52:43.604Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Button Style Design">
+<meta name="twitter:description" content="Button 按鈕設計12345&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&amp;gt;&amp;lt;selector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&amp;gt;	&amp;lt;item android:drawable=&quot;@color/filters_buttons_selected&quot; andr">
+<meta name="twitter:image" content="https://cheankumio.gitbooks.io/kenny-code/content/assets/20170822_101548.gif">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="K.L. Developer Blog" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>Button Style Design | K.L. Developer Blog</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: true
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">KuanLin</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">Android &amp; Java &amp; Programing..</p>
+        
+
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜單</li>
+                        <li>標籤</li>
+                        
+                        <li>友情鏈接</li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主頁</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">標籤雲</a></li>
+                        
+                            <li><a href="/about/">關於我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:4ndroid4ppdev@gmail.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="https://github.com/cheankumio" title="GitHub"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Animation/">Animation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bitmap/">Bitmap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Button/">Button</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Design/">Design</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/EvenBus/">EvenBus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Facebook/">Facebook</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Fragment/">Fragment</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Interface/">Interface</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PopupWindow/">PopupWindow</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RecyclerView/">RecyclerView</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RxJava/">RxJava</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Volley/">Volley</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fontsize/">fontsize</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/memory/">memory</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">KuanLin</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">KuanLin</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">Android &amp; Java &amp; Programing..</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主頁</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">標籤雲</a></li>
+                
+                    <li><a href="/about/">關於我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:4ndroid4ppdev@gmail.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/cheankumio" title="GitHub"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="標籤" friends="友情鏈接" about="關於我"/>
+</nav>
+      <div class="body-wrap"><article id="post-Button-Style-Design" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/11/06/Button-Style-Design/" class="article-date">
+      <time datetime="2017-11-06T07:22:23.000Z" itemprop="datePublished">2017-11-06</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Button Style Design
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Android/">Android</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Button/">Button</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Design/">Design</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="Button-按鈕設計"><a href="#Button-按鈕設計" class="headerlink" title="Button 按鈕設計"></a>Button 按鈕設計</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">selector</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">item</span> <span class="attr">android:drawable</span>=<span class="string">"@color/filters_buttons_selected"</span> <span class="attr">android:state_pressed</span>=<span class="string">"true"</span> /&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">item</span> <span class="attr">android:drawable</span>=<span class="string">"@color/filters_buttons"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">selector</span>&gt;</span></div></pre></td></tr></table></figure>
+<p><code>android:state_pressed=&quot;true&quot;</code> 屬性是按下後的顏色變化<br><img src="https://cheankumio.gitbooks.io/kenny-code/content/assets/20170822_101548.gif" alt=""></p>
+<p>這樣就可以幫按鈕添加自訂色彩，如果使用的是imageButton<br>可以在<code>android:src=&quot; ... &quot;</code>設定圖片資源，即可設計出簡單美觀的自訂按鈕</p>
+<hr>
+<h3 id="設定圓角"><a href="#設定圓角" class="headerlink" title="設定圓角"></a>設定圓角</h3><blockquote>
+<p>如果要設定圓角及其他特效，就不能直接於<code>item</code>之後設定<code>android:drawable=&quot;xx&quot;</code>，否則其他設定都會被這個顏色給覆蓋。</p>
+</blockquote>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">selector</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span>&gt;</span></div><div class="line">	<span class="comment">&lt;!-- 按下後的狀態 --&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">item</span> <span class="attr">android:state_pressed</span>=<span class="string">"true"</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">shape</span> <span class="attr">android:shape</span>=<span class="string">"rectangle"</span>&gt;</span></div><div class="line">			<span class="comment">&lt;!-- 該按鈕按下後的顏色 --&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">solid</span> <span class="attr">android:color</span>=<span class="string">"@color/dred"</span>/&gt;</span></div><div class="line">			<span class="comment">&lt;!-- 圓角呈度 --&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">corners</span> <span class="attr">android:radius</span>=<span class="string">"30dp"</span> /&gt;</span></div><div class="line">			<span class="comment">&lt;!-- 邊框寬度和顏色 --&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">stroke</span> <span class="attr">android:width</span>=<span class="string">"2dp"</span> <span class="attr">android:color</span>=<span class="string">"#538394"</span> /&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">shape</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">item</span>&gt;</span></div><div class="line"></div><div class="line">	<span class="comment">&lt;!-- 預設的狀態 --&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">item</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">shape</span> <span class="attr">android:shape</span>=<span class="string">"rectangle"</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">corners</span> <span class="attr">android:radius</span>=<span class="string">"30dp"</span> /&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">solid</span> <span class="attr">android:color</span>=<span class="string">"@color/fred"</span>/&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">stroke</span> <span class="attr">android:width</span>=<span class="string">"2dp"</span> <span class="attr">android:color</span>=<span class="string">"#538394"</span> /&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">shape</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">item</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">selector</span>&gt;</span></div></pre></td></tr></table></figure>
+<p><strong> 實現效果 </strong></p>
+<p><img src="https://cheankumio.gitbooks.io/kenny-code/content/assets/20170822_104509.gif" alt=""></p>
+<hr>
+<h3 id="設定圓型Button及漸層色彩"><a href="#設定圓型Button及漸層色彩" class="headerlink" title="設定圓型Button及漸層色彩"></a>設定圓型Button及漸層色彩</h3><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</div><div class="line">&lt;selector xmlns:android="http://schemas.android.com/apk/res/android"&gt;</div><div class="line">	&lt;item android:state_pressed="true"&gt;</div><div class="line">		&lt;!-- 設定為圓型型狀 shape="oval" --&gt;</div><div class="line">		&lt;shape android:shape="oval"&gt;</div><div class="line">			&lt;!-- 起始色彩為 #0A9BCD --&gt;</div><div class="line">			&lt;gradient android:startColor="#0A9BCD"</div><div class="line">			&lt;!-- 最終色彩為 #083B4D--&gt;</div><div class="line">			android:endColor="#083B4D"</div><div class="line">			&lt;!-- 漸層半徑 --&gt;</div><div class="line">			android:gradientRadius="60dp"</div><div class="line">			&lt;!-- 漸層模式 --&gt;</div><div class="line">			android:type="radial"/&gt;</div><div class="line">			&lt;corners android:radius="30dp" /&gt;</div><div class="line">			&lt;stroke android:width="2dp" android:color="@color/strokec" /&gt;</div><div class="line">		&lt;/shape&gt;</div><div class="line">	&lt;/item&gt;</div><div class="line"></div><div class="line">	&lt;item &gt;</div><div class="line">		&lt;shape android:shape="oval"&gt;</div><div class="line">			&lt;corners android:radius="10dp" /&gt;</div><div class="line">			&lt;solid android:color="#0A9BCD"/&gt;</div><div class="line">			&lt;stroke android:width="2dp" android:color="@color/strokec" /&gt;</div><div class="line">		&lt;/shape&gt;</div><div class="line">	&lt;/item&gt;</div><div class="line">&lt;/selector&gt;</div></pre></td></tr></table></figure>
+<p><strong> 實現效果 </strong></p>
+<p><img src="https://cheankumio.gitbooks.io/kenny-code/content/assets/20170822_105739.gif" alt=""></p>
+<hr>
+<h3 id="交叉使用"><a href="#交叉使用" class="headerlink" title="交叉使用"></a>交叉使用</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">selector</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">item</span> <span class="attr">android:state_pressed</span>=<span class="string">"true"</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">shape</span> <span class="attr">android:shape</span>=<span class="string">"oval"</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">gradient</span> <span class="attr">android:startColor</span>=<span class="string">"#0A9BCD"</span></span></div><div class="line">				<span class="attr">android:endColor</span>=<span class="string">"#083B4D"</span></div><div class="line">				<span class="attr">android:gradientRadius</span>=<span class="string">"60dp"</span></div><div class="line">				<span class="attr">android:type</span>=<span class="string">"radial"</span>/&gt;</div><div class="line">			<span class="tag">&lt;<span class="name">stroke</span> <span class="attr">android:width</span>=<span class="string">"2dp"</span> <span class="attr">android:color</span>=<span class="string">"@color/strokec"</span> /&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">shape</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">item</span>&gt;</span></div><div class="line"></div><div class="line">	<span class="tag">&lt;<span class="name">item</span> &gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">shape</span> <span class="attr">android:shape</span>=<span class="string">"rectangle"</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">corners</span> <span class="attr">android:radius</span>=<span class="string">"20dp"</span> /&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">solid</span> <span class="attr">android:color</span>=<span class="string">"#0A9BCD"</span>/&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">stroke</span> <span class="attr">android:width</span>=<span class="string">"2dp"</span> <span class="attr">android:color</span>=<span class="string">"@color/strokec"</span> /&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">shape</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">item</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">selector</span>&gt;</span></div></pre></td></tr></table></figure>
+<p><strong> 實現效果 </strong></p>
+<p><img src="https://cheankumio.gitbooks.io/kenny-code/content/assets/20170822_110918.gif" alt=""></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文標題:</span><a href="/2017/11/06/Button-Style-Design/">Button Style Design</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主頁">KuanLin</a></p>
+        <p><span>發布時間:</span>2017-11-06, 15:22:23</p>
+        <p><span>最後更新:</span>2017-11-06, 15:52:43</p>
+        <p>
+            <span>原始鏈接:</span><a class="post-url" href="/2017/11/06/Button-Style-Design/" title="Button Style Design">https://cheankumio.github.io/2017/11/06/Button-Style-Design/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://cheankumio.github.io/2017/11/06/Button-Style-Design/　　作者: KuanLin" title="點擊複製文章鏈接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>許可協議:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"姓名標示-非商業性-相同方式分享 4.0 國際"</a> 轉載請保留原文鏈接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2017/11/06/Control-widget-position/">
+                    Control widget position
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2017/08/07/RxJava-Thread-Control/">
+                    RxJava_Thread_Control
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目錄</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Button-按鈕設計"><span class="toc-number">1.</span> <span class="toc-text">Button 按鈕設計</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#設定圓角"><span class="toc-number">1.1.</span> <span class="toc-text">設定圓角</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#設定圓型Button及漸層色彩"><span class="toc-number">1.2.</span> <span class="toc-text">設定圓型Button及漸層色彩</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#交叉使用"><span class="toc-number">1.3.</span> <span class="toc-text">交叉使用</span></a></li></ol></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隱藏目錄"  title="點擊按鈕隱藏或者顯示文章目錄">
+
+    <script>
+        yiliaConfig.toc = ["隱藏目錄", "顯示目錄", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"Button Style Design　| K.L. Developer Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2017/11/06/Control-widget-position/" title="上一篇: Control widget position">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2017/08/07/RxJava-Thread-Control/" title="下一篇: RxJava_Thread_Control">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/11/06/Facebook-Account-Kit-Use-Guide/">Facebook Account Kit Use Guide</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/06/解決Android系統預設字體過大影響佈局問題/">解決Android系統預設字體過大影響佈局問題</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/06/Bitmap占用記憶體計算/">Bitmap占用記憶體計算</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/06/Fragment-EvenBus/">Fragment & EvenBus</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/06/Volley-use-guide/">Volley use guide</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/06/onItemClickListener-for-RecyclerView/">onItemClickListener for RecyclerView</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/06/PopupWindow/">PopupWindow</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/06/How-to-use-RecyclerView/">How to use RecyclerView</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/06/Control-widget-position/">Control widget position</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/06/Button-Style-Design/">Button Style Design</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/07/RxJava-Thread-Control/">RxJava_Thread_Control</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/07/RxJava/">RxJava</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/20/MyFirstPost/">MyFirstPost</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/20/hello-world/">Hello World</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2017 KuanLin
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、簡單且強大的網誌框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="簡而不減 Hexo 雙欄網誌主題  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="本站到訪數"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="本頁閱讀量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回頂部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看評論"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="轉到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>

@@ -186,7 +186,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RxJava/">RxJava</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Animation/">Animation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bitmap/">Bitmap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Button/">Button</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Design/">Design</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/EvenBus/">EvenBus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Facebook/">Facebook</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Fragment/">Fragment</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Interface/">Interface</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PopupWindow/">PopupWindow</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RecyclerView/">RecyclerView</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RxJava/">RxJava</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Volley/">Volley</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fontsize/">fontsize</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/memory/">memory</a></li></ul>
                     </div>
                 </section>
                 
@@ -257,11 +257,11 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-RxJava-Thread-Control" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Facebook-Account-Kit-Use-Guide" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/08/07/RxJava-Thread-Control/" class="article-date">
-      <time datetime="2017-08-07T01:15:24.000Z" itemprop="datePublished">2017-08-07</time>
+      <a href="/2017/11/06/Facebook-Account-Kit-Use-Guide/" class="article-date">
+      <time datetime="2017-11-06T08:09:24.000Z" itemprop="datePublished">2017-11-06</time>
 </a>
 
 
@@ -276,7 +276,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/07/RxJava-Thread-Control/">RxJava_Thread_Control</a>
+      <a class="article-title" href="/2017/11/06/Facebook-Account-Kit-Use-Guide/">Facebook Account Kit Use Guide</a>
     </h1>
   
 
@@ -286,84 +286,66 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <h2 id="RxJava-線程控制"><a href="#RxJava-線程控制" class="headerlink" title="RxJava 線程控制"></a>RxJava 線程控制</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 在當前線程運行</span></div><div class="line">Schedulers.immediate()</div><div class="line"></div><div class="line"><span class="comment">// 總是開啟新線程，並在新線程執行</span></div><div class="line">Schedulers.newThread()</div><div class="line"></div><div class="line"><span class="comment">// io操作(讀寫文件、網路交互)，類似newThread，區別在於io()內部為無數量上限的線程池，因此多數情況下io()比newThread更有效率(建議不要將計算工作放在io()中)</span></div><div class="line">Schedulers.io()</div><div class="line"></div><div class="line"><span class="comment">// 進行計算工作所使用的Scheduler</span></div><div class="line">Schedulers.computation()</div><div class="line"></div><div class="line"><span class="comment">// 切換線程至主線程</span></div><div class="line">AndroidSchedulers.mainThread()</div></pre></td></tr></table></figure>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Android/">Android</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RxJava/">RxJava</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2017/08/07/RxJava-Thread-Control/#more">查看全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-RxJava" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/08/07/RxJava/" class="article-date">
-      <time datetime="2017-08-07T01:12:08.000Z" itemprop="datePublished">2017-08-07</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/07/RxJava/">RxJava</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h2 id="RxJava-amp-RxAndroid"><a href="#RxJava-amp-RxAndroid" class="headerlink" title="RxJava &amp; RxAndroid"></a>RxJava &amp; RxAndroid</h2><p><strong>RxJava的基本認知</strong><br>RxJava 重要的核心概念為Observables和Subscribers</p>
-<ul>
-<li>Observables &gt; 被觀察者</li>
-<li>Subscribers &gt; 訂閱者</li>
-</ul>
-<p>舉例來說，你可以訂閱某部落格(Observables)，而當部落格發文時，訂閱者(Subscribers)就會收到通知。</p>
+        <p>#Facebook Account Kit</p>
+<p><img src="https://www.eyerys.com/sites/default/files/fb-accountkit.jpg" alt=""></p>
 <blockquote>
-<p>而這個概念就是異步(Async)。</p>
+<p>先前Firebase也有推出Auth驗證方式，整合了Email, 簡訊等方式，這次輪到FB推出整合帳戶登入工具囉！</p>
 </blockquote>
-          
+<h4 id="前往FB網站進行新手教學"><a href="#前往FB網站進行新手教學" class="headerlink" title="前往FB網站進行新手教學"></a>前往FB網站進行新手教學</h4><h4 id="FB-Account-Kit-Guide"><a href="#FB-Account-Kit-Guide" class="headerlink" title="FB Account Kit Guide"></a><a href="https://developers.facebook.com/docs/accountkit/android" target="_blank" rel="external">FB Account Kit Guide</a></h4><ul>
+<li><h3 id="第一步-註冊FB開發者帳號"><a href="#第一步-註冊FB開發者帳號" class="headerlink" title=" 第一步 - 註冊FB開發者帳號 "></a><strong> 第一步 - 註冊FB開發者帳號 </strong></h3></li>
+</ul>
+<p><img src="https://cheankumio.gitbooks.io/kenny-code/content/assets/2017-09-27_100455.png" alt=""></p>
+<hr>
+<ul>
+<li><h3 id="第二步-建立應用程式編號"><a href="#第二步-建立應用程式編號" class="headerlink" title=" 第二步 - 建立應用程式編號"></a><strong> 第二步 - 建立應用程式編號</strong></h3></li>
+</ul>
+<p><img src="https://cheankumio.gitbooks.io/kenny-code/content/assets/2017-09-27_100811.png" alt=""></p>
+<hr>
+<ul>
+<li><h3 id="第三步-新增產品-Account-Kit"><a href="#第三步-新增產品-Account-Kit" class="headerlink" title=" 第三步 - 新增產品( Account Kit )"></a><strong> 第三步 - 新增產品( Account Kit )</strong></h3></li>
+</ul>
+<p><img src="https://cheankumio.gitbooks.io/kenny-code/content/assets/2017-09-27_100845.png" alt=""></p>
+<blockquote>
+<p>按下設定即可新增並進行設置</p>
+</blockquote>
+<hr>
+<ul>
+<li><h3 id="第四步-取得Account-Kit-Token"><a href="#第四步-取得Account-Kit-Token" class="headerlink" title=" 第四步 - 取得Account Kit Token"></a><strong> 第四步 - 取得Account Kit Token</strong></h3></li>
+</ul>
+<p>這是要在App裡面的strings.xml設定的value之一，先記住位置</p>
+<p><code>&lt;string name=&quot;client_token&quot;&gt;4951127*****************&lt;/string&gt;</code></p>
+<p><img src="https://cheankumio.gitbooks.io/kenny-code/content/assets/2017-09-27_101659.png" alt=""></p>
+<hr>
+<ul>
+<li><h3 id="第五步-取得APP-ID"><a href="#第五步-取得APP-ID" class="headerlink" title=" 第五步 - 取得APP ID"></a><strong> 第五步 - 取得APP ID</strong></h3></li>
+</ul>
+<p>這是要在App裡面的strings.xml設定的value之一，先記住位置</p>
+<p><code>&lt;string name=&quot;app_id&quot;&gt;121********&lt;/string&gt;</code></p>
+<p><img src="https://cheankumio.gitbooks.io/kenny-code/content/assets/2017-09-27_101219.png" alt=""></p>
+<hr>
+<ul>
+<li><h3 id="第六步-匯入官方Account-Kit-Sample"><a href="#第六步-匯入官方Account-Kit-Sample" class="headerlink" title=" 第六步 - 匯入官方Account Kit Sample "></a><strong> 第六步 - 匯入官方Account Kit Sample </strong></h3></li>
+</ul>
+<p><a href="https://github.com/fbsamples/account-kit-samples-for-android" target="_blank" rel="external">Account Kit Sample 傳送門</a></p>
+<p>基本上先用AccountKitSimpleSample做測試，等熟悉之後再去了解AccountKitSample即可</p>
+<p>這裡不贅述怎麼匯入專案，但是匯入之後有幾個要修改成自己的數值必須注意</p>
+<p><code>res -&gt; values -&gt; strings.xml</code><br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">string</span> <span class="attr">name</span>=<span class="string">"ak_login_protocol_scheme"</span>&gt;</span>ak60951383911****<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">string</span> <span class="attr">name</span>=<span class="string">"app_id"</span>&gt;</span>60951383911****<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">string</span> <span class="attr">name</span>=<span class="string">"client_token"</span>&gt;</span>e126a6ca1c0fa6af1f883e96********<span class="tag">&lt;/<span class="name">string</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<ul>
+<li>FB的教學指引沒有提到的是 <code>ak_login_protocol_scheme</code> 這裡的值就是 <code>app_id</code> 的值前面加上 <code>ak</code> 這樣即可</li>
+<li><code>app_id</code> 就是上面第五步提到的 APP ID</li>
+<li><code>client_token</code> 是上面第四步提到的 Account Kit Token<h4 id="這樣就算是設定完畢，可以直接執行專案測試看看囉！"><a href="#這樣就算是設定完畢，可以直接執行專案測試看看囉！" class="headerlink" title="這樣就算是設定完畢，可以直接執行專案測試看看囉！"></a>這樣就算是設定完畢，可以直接執行專案測試看看囉！</h4></li>
+</ul>
+<hr>
+<ul>
+<li><h3 id="你可能會遇到的坑"><a href="#你可能會遇到的坑" class="headerlink" title="你可能會遇到的坑"></a><strong>你可能會遇到的坑</strong></h3></li>
+</ul>
+<p><strong> 如果看到這個畫面 </strong></p>
+<p><img src="https://cheankumio.gitbooks.io/kenny-code/content/assets/2017-09-27_103306.png" alt=""></p>
+<h5 id="首先檢查-app-id-及-client-token-設定是否為同一支APP的參數，我測試發現-ak-login-protocol-scheme-設定錯誤的話，其實還是能正常執行"><a href="#首先檢查-app-id-及-client-token-設定是否為同一支APP的參數，我測試發現-ak-login-protocol-scheme-設定錯誤的話，其實還是能正常執行" class="headerlink" title="首先檢查 app_id 及 client_token 設定是否為同一支APP的參數，我測試發現 ak_login_protocol_scheme 設定錯誤的話，其實還是能正常執行"></a>首先檢查 <code>app_id</code> 及 <code>client_token</code> 設定是否為同一支APP的參數，我測試發現 <code>ak_login_protocol_scheme</code> 設定錯誤的話，其實還是能正常執行</h5><h5 id="如果還是不能成功傳送簡訊，請確認下圖框框中的選項有開啟-開到是的地方"><a href="#如果還是不能成功傳送簡訊，請確認下圖框框中的選項有開啟-開到是的地方" class="headerlink" title="如果還是不能成功傳送簡訊，請確認下圖框框中的選項有開啟( 開到是的地方 )"></a>如果還是不能成功傳送簡訊，請確認下圖框框中的選項有開啟( 開到是的地方 )</h5><p><img src="https://cheankumio.gitbooks.io/kenny-code/content/assets/2017-09-27_103343.png" alt=""></p>
+<blockquote>
+<p>如果<code>啟用用戶端存取權杖流程</code>這裡是<strong>否</strong>的話，那是無法做簡訊驗證及Email驗證的。</p>
+</blockquote>
+<h4 id="其他如果我有遇到坑會再補上來。"><a href="#其他如果我有遇到坑會再補上來。" class="headerlink" title="其他如果我有遇到坑會再補上來。"></a>其他如果我有遇到坑會再補上來。</h4>
       
     </div>
     
@@ -377,13 +359,9 @@
 
       
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RxJava/">RxJava</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Facebook/">Facebook</a></li></ul>
     </div>
 
-      
-        <p class="article-more-link">
-          <a href="/2017/08/07/RxJava/#more">查看全文 >></a>
-        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -401,11 +379,11 @@
 
 
   
-    <article id="post-MyFirstPost" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-解決Android系統預設字體過大影響佈局問題" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/07/20/MyFirstPost/" class="article-date">
-      <time datetime="2017-07-20T07:21:40.000Z" itemprop="datePublished">2017-07-20</time>
+      <a href="/2017/11/06/解決Android系統預設字體過大影響佈局問題/" class="article-date">
+      <time datetime="2017-11-06T08:07:26.000Z" itemprop="datePublished">2017-11-06</time>
 </a>
 
 
@@ -420,7 +398,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/20/MyFirstPost/">MyFirstPost</a>
+      <a class="article-title" href="/2017/11/06/解決Android系統預設字體過大影響佈局問題/">解決Android系統預設字體過大影響佈局問題</a>
     </h1>
   
 
@@ -430,19 +408,34 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="First-Post"><a href="#First-Post" class="headerlink" title="First Post"></a>First Post</h2><blockquote>
-<p>The Blog Built in 2017/7/20</p>
+        <h2 id="解決-Android-系統字體影響布局問題"><a href="#解決-Android-系統字體影響布局問題" class="headerlink" title="解決 Android 系統字體影響布局問題"></a>解決 <strong>Android</strong> 系統字體影響布局問題</h2><blockquote>
+<p>2017/10/31 於教育訓練後遇到的問題，某些使用者將系統預設字體設定為<strong> [極大] </strong>，或者其他導致佈局混亂的大小，導致某些功能無法正常使用(被遮掩)。</p>
 </blockquote>
-<p>Is the First Post in this blog.<br>I want to say <code>&#39; Hello World &#39;</code> !!</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">say</span><span class="params">(String str)</span></span></div><div class="line">&#123;</div><div class="line">	System.out.print(str);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="解決辦法是-Configuration"><a href="#解決辦法是-Configuration" class="headerlink" title="解決辦法是 Configuration"></a>解決辦法是 <code>Configuration</code></h3><ul>
+<li>藉由取得系統<code>Configuration</code>以及其<code>fontScale</code>來做判斷，進而取得控制佈局的可能。</li>
+<li><p>以下直接以程式碼作範例:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">Configuration configuration = getResources().getConfiguration();</div><div class="line">    Resources res = getResources();</div><div class="line">    <span class="keyword">if</span>(configuration.fontScale&gt;=<span class="number">1.35</span>)</div><div class="line">    &#123;</div><div class="line">        Configuration newconfig = <span class="keyword">new</span> Configuration();</div><div class="line">        newconfig.setToDefaults();</div><div class="line">        newconfig.fontScale=<span class="number">1.2f</span>;</div><div class="line">        res.updateConfiguration(newconfig,res.getDisplayMetrics());</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">/*</span></div><div class="line">    *    fontScale = 1f (正常)</div><div class="line">    *    fontScale = 1.2f (大)</div><div class="line">    *    fontScale = 1.35f (極大)</div><div class="line">    */</div></pre></td></tr></table></figure>
+</li>
+<li><p>在<code>if</code>判斷式中我設定為大於<code>1.35</code>就進行縮小<code>Scale</code>的行為，主要是因為當<code>Scale</code>大於<code>1.35</code>時，我的佈局會產生影響使用者體驗的問題，所以判斷式成立後，就直接將<code>Scale</code>縮小至<code>1.2</code>倍，如此即解決該問題。</p>
+</li>
+</ul>
+
       
     </div>
     
     <div class="article-info article-info-index">
       
       
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Android/">Android</a>
+    </div>
+
 
       
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fontsize/">fontsize</a></li></ul>
+    </div>
+
       
       <div class="clearfix"></div>
     </div>
@@ -460,11 +453,11 @@
 
 
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Bitmap占用記憶體計算" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/07/20/hello-world/" class="article-date">
-      <time datetime="2017-07-20T06:18:47.734Z" itemprop="datePublished">2017-07-20</time>
+      <a href="/2017/11/06/Bitmap占用記憶體計算/" class="article-date">
+      <time datetime="2017-11-06T08:03:22.000Z" itemprop="datePublished">2017-11-06</time>
 </a>
 
 
@@ -479,7 +472,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/20/hello-world/">Hello World</a>
+      <a class="article-title" href="/2017/11/06/Bitmap占用記憶體計算/">Bitmap占用記憶體計算</a>
     </h1>
   
 
@@ -489,15 +482,66 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <h2 id="圖片記憶體佔用計算方法"><a href="#圖片記憶體佔用計算方法" class="headerlink" title="圖片記憶體佔用計算方法"></a>圖片記憶體佔用計算方法</h2><p>一張圖片佔用的記憶體由以下因素決定：</p>
+<ul>
+<li>圖片中的像素點個數</li>
+<li>每單位像素點佔用字節數</li>
+</ul>
+<p>所以，一張圖片佔用的記憶體值為：</p>
+<blockquote>
+<p><code>圖片長度 * 圖片寬度 * 單位像素點字節數</code></p>
+</blockquote>
+<h3 id="每單位像素點佔用字節數-byte-："><a href="#每單位像素點佔用字節數-byte-：" class="headerlink" title="每單位像素點佔用字節數(byte)："></a>每單位像素點佔用字節數(byte)：</h3><table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">ALPHA_8</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">ARGB_4444</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center">ARGB_8888</td>
+<td style="text-align:center">4</td>
+</tr>
+<tr>
+<td style="text-align:center">RGB_565</td>
+<td style="text-align:center">2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="舉例"><a href="#舉例" class="headerlink" title="舉例"></a>舉例</h3><p>一張<code>RGB_565</code>的圖片，長寬分別是<code>1024 * 768</code>，則：<br><code>1024 * 768 * 2 = 1572864</code> 大約等於1.5Mb的記憶體佔用量</p>
+<h3 id="實際測試"><a href="#實際測試" class="headerlink" title="實際測試"></a>實際測試</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">Drawable drawable = img.getDrawable();</div><div class="line">  <span class="keyword">if</span> (drawable <span class="keyword">instanceof</span> BitmapDrawable) </div><div class="line">  &#123;</div><div class="line">      BitmapDrawable bitDrawable = (BitmapDrawable) drawable;</div><div class="line">          Bitmap bit = bitDrawable.getBitmap();</div><div class="line">          <span class="keyword">int</span> rowBytes = bit.getRowBytes();</div><div class="line">          <span class="keyword">int</span> height = bit.getHeight();</div><div class="line">          Log.d(<span class="string">"MYLOG"</span>,<span class="string">"height: "</span>+height+<span class="string">", width: "</span>+bit.getWidth()+<span class="string">", rowBytes: "</span>+rowBytes);</div><div class="line">          <span class="keyword">long</span> memSize = rowBytes * height;</div><div class="line">          Log.d(<span class="string">"MYLOG"</span>, <span class="string">"memSize = "</span> + memSize + <span class="string">"B = "</span> + formatFileSize(memSize)+<span class="string">"MB"</span>);</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<p><strong> Result </strong>: <code>D/ANDROID_LAB: memSize = 6460752B = 6.1614532470703125MB</code><br>這張圖是<code>1916*843</code>的圖，每一像素為4Byte，所以未經處理的圖片在Android系統中將會佔用6MB多的記憶體空間。</p>
+<p><img src="https://cheankumio.gitbooks.io/kenny-code/content/assets/Screenshot_1503278964.png" alt=""></p>
+<blockquote>
+<p>也就是說，浪費了6MB的空間，實際上只顯示了小小的一張圖在畫面，所以建議圖片顯示之前一定要先處理過圖片。</p>
+</blockquote>
+<p>另外對圖片的處理，並非將KB數壓縮就能解決</p>
+<h3 id="舉例-1"><a href="#舉例-1" class="headerlink" title="舉例"></a>舉例</h3><p>以下三張圖片，實際放入imageView之後<strong>佔用的記憶體是相同的</strong>，並不會因為單純降低畫質而影響佔用記憶體大小</p>
+<table>
+<thead>
+<tr>
+<th><img src="https://cheankumio.gitbooks.io/kenny-code/content/assets/img_a.jpg" alt=""></th>
+<th><img src="https://cheankumio.gitbooks.io/kenny-code/content/assets/img_b.jpg" alt=""></th>
+<th><img src="https://cheankumio.gitbooks.io/kenny-code/content/assets/img_c.jpg" alt=""></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong> Q:100 DPI:300 </strong></td>
+<td><strong> Q:1 DPI:300 </strong></td>
+<td><strong> Q:1 DPI:30 </strong></td>
+</tr>
+</tbody>
+</table>
 
       
     </div>
@@ -505,8 +549,16 @@
     <div class="article-info article-info-index">
       
       
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Android/">Android</a>
+    </div>
+
 
       
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bitmap/">Bitmap</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/memory/">memory</a></li></ul>
+    </div>
+
       
       <div class="clearfix"></div>
     </div>
@@ -524,6 +576,594 @@
 
 
   
+    <article id="post-Fragment-EvenBus" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/11/06/Fragment-EvenBus/" class="article-date">
+      <time datetime="2017-11-06T07:58:47.000Z" itemprop="datePublished">2017-11-06</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/06/Fragment-EvenBus/">Fragment &amp; EvenBus</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>#Fragment &amp; EvenBus</p>
+<p><strong> Video </strong></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pgOXnraKraI" frameborder="0" allowfullscreen></iframe>
+
+<hr>
+<blockquote>
+<blockquote>
+<p>activity_maim.xml</p>
+</blockquote>
+</blockquote>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">RelativeLayout</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span></div><div class="line">    <span class="attr">xmlns:app</span>=<span class="string">"http://schemas.android.com/apk/res-auto"</span></div><div class="line">    <span class="attr">xmlns:tools</span>=<span class="string">"http://schemas.android.com/tools"</span></div><div class="line">    <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line">    <span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span>&gt;</div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">fragment</span></span></div><div class="line">        <span class="attr">android:id</span>=<span class="string">"@+id/fragment"</span></div><div class="line">        <span class="attr">android:name</span>=<span class="string">"klapper.caseupload.fragment1"</span></div><div class="line">        <span class="attr">android:layout_width</span>=<span class="string">"wrap_content"</span></div><div class="line">        <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">        <span class="attr">tools:layout</span>=<span class="string">"@layout/fragment1_layout"</span> /&gt;</div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">fragment</span></span></div><div class="line">        <span class="attr">android:id</span>=<span class="string">"@+id/fragment2"</span></div><div class="line">        <span class="attr">android:name</span>=<span class="string">"klapper.caseupload.fragment2"</span></div><div class="line">        <span class="attr">android:layout_width</span>=<span class="string">"wrap_content"</span></div><div class="line">        <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">        <span class="attr">android:layout_below</span>=<span class="string">"@+id/fragment"</span></div><div class="line">        <span class="attr">android:layout_marginTop</span>=<span class="string">"30dp"</span></div><div class="line">        <span class="attr">tools:layout</span>=<span class="string">"@layout/fragment2_layout"</span> /&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">RelativeLayout</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id=""><a href="#" class="headerlink" title="-"></a>-</h2><blockquote>
+<blockquote>
+<p>fragment 1</p>
+</blockquote>
+</blockquote>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">RelativeLayout</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span></div><div class="line">    <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span> <span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span>&gt;</div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line">        <span class="attr">android:id</span>=<span class="string">"@+id/textView"</span></div><div class="line">        <span class="attr">android:layout_width</span>=<span class="string">"wrap_content"</span></div><div class="line">        <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">        <span class="attr">android:text</span>=<span class="string">"Fragment 1："</span></div><div class="line">        <span class="attr">android:textColor</span>=<span class="string">"#000000"</span></div><div class="line">        <span class="attr">android:textSize</span>=<span class="string">"16sp"</span></div><div class="line">        <span class="attr">android:textStyle</span>=<span class="string">"bold"</span> /&gt;</div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">Button</span></span></div><div class="line">        <span class="attr">android:id</span>=<span class="string">"@+id/send_btn"</span></div><div class="line">        <span class="attr">android:layout_width</span>=<span class="string">"wrap_content"</span></div><div class="line">        <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">        <span class="attr">android:layout_below</span>=<span class="string">"@+id/textView"</span></div><div class="line">        <span class="attr">android:layout_marginLeft</span>=<span class="string">"15dp"</span></div><div class="line">        <span class="attr">android:layout_marginTop</span>=<span class="string">"15dp"</span></div><div class="line">        <span class="attr">android:text</span>=<span class="string">"Send Message"</span> /&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">RelativeLayout</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="-1"><a href="#-1" class="headerlink" title="-"></a>-</h2><blockquote>
+<blockquote>
+<p>fragment 2</p>
+</blockquote>
+</blockquote>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">RelativeLayout</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span></div><div class="line">    <span class="attr">android:orientation</span>=<span class="string">"vertical"</span> <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line">    <span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span>&gt;</div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line">        <span class="attr">android:id</span>=<span class="string">"@+id/textView"</span></div><div class="line">        <span class="attr">android:layout_width</span>=<span class="string">"wrap_content"</span></div><div class="line">        <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">        <span class="attr">android:text</span>=<span class="string">"Fragment 2："</span></div><div class="line">        <span class="attr">android:textColor</span>=<span class="string">"#000000"</span></div><div class="line">        <span class="attr">android:textSize</span>=<span class="string">"16sp"</span></div><div class="line">        <span class="attr">android:textStyle</span>=<span class="string">"bold"</span> /&gt;</div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line">        <span class="attr">android:id</span>=<span class="string">"@+id/textView2"</span></div><div class="line">        <span class="attr">android:layout_width</span>=<span class="string">"wrap_content"</span></div><div class="line">        <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">        <span class="attr">android:layout_below</span>=<span class="string">"@+id/textView"</span></div><div class="line">        <span class="attr">android:layout_marginLeft</span>=<span class="string">"15dp"</span></div><div class="line">        <span class="attr">android:layout_marginTop</span>=<span class="string">"15dp"</span></div><div class="line">        <span class="attr">android:text</span>=<span class="string">"Receive String..."</span></div><div class="line">        <span class="attr">android:textSize</span>=<span class="string">"15sp"</span></div><div class="line">        <span class="attr">android:textStyle</span>=<span class="string">"italic"</span> /&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">RelativeLayout</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="-2"><a href="#-2" class="headerlink" title="-"></a>-</h2><blockquote>
+<blockquote>
+<p>MainActivity.java</p>
+</blockquote>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">Activity</span> </span>&#123;</div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</div><div class="line">        setContentView(R.layout.activity_main);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="-3"><a href="#-3" class="headerlink" title="-"></a>-</h2><blockquote>
+<blockquote>
+<p>fragment1.java</p>
+</blockquote>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">fragment1</span> <span class="keyword">extends</span> <span class="title">Fragment</span> </span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">private</span> View rootView;</div><div class="line">    <span class="meta">@Nullable</span></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> View <span class="title">onCreateView</span><span class="params">(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState)</span> </span></div><div class="line">    &#123;</div><div class="line">        rootView = inflater.inflate(R.layout.fragment1_layout, container, <span class="keyword">false</span>);</div><div class="line">        Button sendMessage = (Button)rootView.findViewById(R.id.send_btn);</div><div class="line"></div><div class="line">        sendMessage.setOnClickListener(<span class="keyword">new</span> View.OnClickListener() </div><div class="line">        &#123;</div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClick</span><span class="params">(View v)</span> </span></div><div class="line">            &#123;</div><div class="line">                EventBus.getDefault().post(<span class="keyword">new</span> SomeEvent(<span class="string">"Hello this is Fragment1!!"</span>));</div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line"></div><div class="line">        <span class="keyword">return</span> rootView;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+<blockquote>
+<blockquote>
+<p>fragment2.java</p>
+</blockquote>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">fragment2</span> <span class="keyword">extends</span> <span class="title">Fragment</span> </span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">private</span> View rootView;</div><div class="line">    <span class="keyword">private</span> TextView receiveString;</div><div class="line">    <span class="keyword">private</span> String tmpString;</div><div class="line"></div><div class="line">    <span class="meta">@Nullable</span></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> View <span class="title">onCreateView</span><span class="params">(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState)</span> </span></div><div class="line">    &#123;</div><div class="line">        rootView = inflater.inflate(R.layout.fragment2_layout, container, <span class="keyword">false</span>);</div><div class="line">        receiveString = (TextView)rootView.findViewById(R.id.textView2);</div><div class="line"></div><div class="line">        <span class="keyword">return</span> rootView;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Subscribe</span>(threadMode = ThreadMode.MainThread)</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onEven</span><span class="params">(SomeEvent event)</span></span></div><div class="line">    &#123;</div><div class="line">        tmpString += event.getMessage() + <span class="string">"\n"</span>;</div><div class="line"></div><div class="line">        receiveString.setText(tmpString);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onStart</span><span class="params">()</span> </span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">super</span>.onStart();</div><div class="line">        EventBus.getDefault().register(<span class="keyword">this</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onStop</span><span class="params">()</span> </span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">super</span>.onStop();</div><div class="line">        EventBus.getDefault().unregister(<span class="keyword">this</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Android/">Android</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/EvenBus/">EvenBus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Fragment/">Fragment</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Volley-use-guide" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/11/06/Volley-use-guide/" class="article-date">
+      <time datetime="2017-11-06T07:41:39.000Z" itemprop="datePublished">2017-11-06</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/06/Volley-use-guide/">Volley use guide</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="Volley"><a href="#Volley" class="headerlink" title="Volley"></a>Volley</h1><h2 id="Get-Start"><a href="#Get-Start" class="headerlink" title="Get Start"></a>Get Start</h2><h4 id="import-library"><a href="#import-library" class="headerlink" title="import library"></a>import library</h4><p>Open <strong>build.gradle</strong> and Add volley Support by Adding <code>compile &#39;com.android.volley:volley:1.+&#39;</code></p>
+<h4 id="Adding-Permission"><a href="#Adding-Permission" class="headerlink" title="Adding Permission"></a>Adding Permission</h4><p>In <strong>AndroidManifests.xml</strong> add INTERNET Permission<br><code>&lt;uses-permission android:name=&quot;android.permission.INTERNET&quot;/&gt;</code></p>
+<h4 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h4><p>Init RequestQueue <code>RequestQueue mQueue = Volley.newRequestQueue(this);</code></p>
+<h4 id="Get"><a href="#Get" class="headerlink" title="Get"></a>Get</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// String Request</span></div><div class="line">StringRequest getRequest = <span class="keyword">new</span> StringRequest(<span class="string">"https://jsonplaceholder.typicode.com/posts"</span>,</div><div class="line">	<span class="keyword">new</span> Response.Listener&lt;String&gt;()</div><div class="line">	&#123;</div><div class="line">		<span class="meta">@Override</span></div><div class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onResponse</span><span class="params">(String s)</span></span></div><div class="line">		&#123;</div><div class="line">			Log.d(<span class="string">"MYLOG"</span>,<span class="string">"The String: "</span>+s);</div><div class="line">		&#125;</div><div class="line">	&#125;, <span class="keyword">new</span> Response.ErrorListener()</div><div class="line">	&#123;</div><div class="line">		<span class="meta">@Override</span></div><div class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onErrorResponse</span><span class="params">(VolleyError volleyError)</span></span></div><div class="line">		&#123;</div><div class="line">			Log.d(<span class="string">"MYLOG"</span>,volleyError.toString());</div><div class="line">		&#125;</div><div class="line">	&#125;);</div><div class="line">	mQueue.add(getRequest);</div><div class="line"><span class="comment">// JSONObject Request</span></div><div class="line">JsonObjectRequest jsonObjectRequest = <span class="keyword">new</span> JsonObjectRequest(Request.Method.GET,</div><div class="line">	<span class="string">"https://jsonplaceholder.typicode.com/posts"</span>,<span class="keyword">null</span>, <span class="keyword">new</span> Response.Listener&lt;JSONObject&gt;()</div><div class="line">	&#123;</div><div class="line">		<span class="meta">@Override</span></div><div class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onResponse</span><span class="params">(JSONObject response)</span></span></div><div class="line">		&#123;</div><div class="line">			Log.d(<span class="string">"MYLOG"</span>,response.toString());</div><div class="line">		&#125;</div><div class="line">	&#125;, <span class="keyword">new</span> Response.ErrorListener()</div><div class="line">	&#123;</div><div class="line">		<span class="meta">@Override</span></div><div class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onErrorResponse</span><span class="params">(VolleyError error)</span></span></div><div class="line">		&#123;</div><div class="line">			Log.d(<span class="string">"MYLOG"</span>,error.toString());</div><div class="line">		&#125;</div><div class="line">	&#125;);</div><div class="line">mQueue.add(jsonObjectRequest);</div></pre></td></tr></table></figure>
+<h4 id="Post"><a href="#Post" class="headerlink" title="Post"></a>Post</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">StringRequest questpost = <span class="keyword">new</span> StringRequest(Request.Method.POST,</div><div class="line">	<span class="string">"http://jsonplaceholder.typicode.com/posts"</span>,</div><div class="line">	<span class="keyword">new</span> Response.Listener&lt;String&gt;()</div><div class="line">	&#123;</div><div class="line">		<span class="meta">@Override</span></div><div class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onResponse</span><span class="params">(String response)</span></span></div><div class="line">		&#123;</div><div class="line">			Log.d(<span class="string">"MYLOG"</span>,<span class="string">"String: "</span>+response);</div><div class="line">		&#125;</div><div class="line">	&#125;, <span class="keyword">new</span> Response.ErrorListener()</div><div class="line">	&#123;</div><div class="line"></div><div class="line">		<span class="meta">@Override</span></div><div class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onErrorResponse</span><span class="params">(VolleyError error)</span></span></div><div class="line">		&#123;</div><div class="line">			Log.d(<span class="string">"MYLOG"</span>,<span class="string">"ERROR: "</span>+error.toString());</div><div class="line">		&#125;</div><div class="line">	&#125;)</div><div class="line">	&#123;</div><div class="line">		<span class="meta">@Override</span></div><div class="line">		<span class="function"><span class="keyword">protected</span> Map&lt;String, String&gt; <span class="title">getParams</span><span class="params">()</span> <span class="keyword">throws</span> AuthFailureError</span></div><div class="line">		&#123;</div><div class="line">			Map&lt;String,String&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</div><div class="line">			map.put(<span class="string">"title"</span>,<span class="string">"foo"</span>);</div><div class="line">			map.put(<span class="string">"body"</span>,<span class="string">"bar"</span>);</div><div class="line">			map.put(<span class="string">"userId"</span>,<span class="string">"444"</span>);</div><div class="line">			<span class="keyword">return</span> map;</div><div class="line">		&#125;</div><div class="line">	&#125;;</div><div class="line">mQueue.add(questpost);</div></pre></td></tr></table></figure>
+<h4 id="PUT"><a href="#PUT" class="headerlink" title="PUT"></a>PUT</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line">StringRequest questpost = <span class="keyword">new</span> StringRequest(Request.Method.PUT,</div><div class="line">	<span class="string">"https://jsonplaceholder.typicode.com/posts/1"</span>, </div><div class="line">	<span class="keyword">new</span> Response.Listener&lt;String&gt;(</div><div class="line">	&#123;</div><div class="line">		<span class="meta">@Override</span></div><div class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onResponse</span><span class="params">(String response)</span></span></div><div class="line">		&#123;</div><div class="line">			Log.d(<span class="string">"MYLOG"</span>,<span class="string">"String: "</span>+response);</div><div class="line">		&#125;</div><div class="line">	&#125;, <span class="keyword">new</span> Response.ErrorListener()</div><div class="line">	&#123;</div><div class="line">		<span class="meta">@Override</span></div><div class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onErrorResponse</span><span class="params">(VolleyError error)</span></span></div><div class="line">		&#123;</div><div class="line">			Log.d(<span class="string">"MYLOG"</span>,<span class="string">"ERROR: "</span>+error.toString());</div><div class="line">		&#125;</div><div class="line">	&#125;)</div><div class="line">	&#123;</div><div class="line">		<span class="comment">// Add Header</span></div><div class="line">		<span class="meta">@Override</span></div><div class="line">		<span class="function"><span class="keyword">public</span> Map&lt;String, String&gt; <span class="title">getHeaders</span><span class="params">()</span> <span class="keyword">throws</span> AuthFailureError</span></div><div class="line">		&#123;</div><div class="line">			Map&lt;String,String&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</div><div class="line">			map.put(<span class="string">"Content-Type"</span>,<span class="string">"application/x-www-form-urlencoded"</span>);</div><div class="line">			<span class="keyword">return</span> map;</div><div class="line">		&#125;</div><div class="line">		<span class="comment">// Add Params</span></div><div class="line">		<span class="meta">@Override</span></div><div class="line">		<span class="function"><span class="keyword">protected</span> Map&lt;String, String&gt; <span class="title">getParams</span><span class="params">()</span> <span class="keyword">throws</span> AuthFailureError</span></div><div class="line">		&#123;</div><div class="line">			Map&lt;String,String&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</div><div class="line">			map.put(<span class="string">"title"</span>,<span class="string">"SSSSSSSfoo"</span>);</div><div class="line">			<span class="keyword">return</span> map;</div><div class="line">		&#125;</div><div class="line">	&#125;;</div><div class="line">mQueue.add(questpost);</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Android/">Android</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Volley/">Volley</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-onItemClickListener-for-RecyclerView" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/11/06/onItemClickListener-for-RecyclerView/" class="article-date">
+      <time datetime="2017-11-06T07:39:39.000Z" itemprop="datePublished">2017-11-06</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/06/onItemClickListener-for-RecyclerView/">onItemClickListener for RecyclerView</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="onItemClickListener-介面實作"><a href="#onItemClickListener-介面實作" class="headerlink" title="onItemClickListener 介面實作"></a>onItemClickListener 介面實作</h2><ul>
+<li>有時後會遇到某些功能實作之後沒有提供ItemClick的方法，這時候就要自己實作ItemClick介面來達成目的了!!</li>
+</ul>
+<h4 id="舉RecyclerView的例子"><a href="#舉RecyclerView的例子" class="headerlink" title="舉RecyclerView的例子"></a>舉RecyclerView的例子</h4><ul>
+<li>RecyclerView沒辦法直接實作.setOnItemClickListener</li>
+<li>所以不能像ListView一樣，取得使用者點到的那一個item</li>
+<li>手動實作itemClick可解決這個問題</li>
+</ul>
+<h4 id="如何實作"><a href="#如何實作" class="headerlink" title="如何實作?"></a>如何實作?</h4><ul>
+<li><strong>第一步</strong> - 在RecyclerViewAdapter內實作介面</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">onItemClickListener</span></span></div><div class="line">&#123;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">onItemClick</span><span class="params">(View view,<span class="keyword">int</span> position)</span></span>;</div><div class="line">&#125;</div><div class="line"><span class="keyword">private</span> onItemClickListener onItemClickListener;</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setOnItemClickListener</span><span class="params">(onItemClickListener onItemClickListener)</span></span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">this</span>.onItemClickListener = onItemClickListener;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><p><strong> 第二步</strong> - 在onBindViewHolder透過OnClickListener達到目的</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(onItemClickListener!=<span class="keyword">null</span>)</div><div class="line">&#123;</div><div class="line">	holder.itemView.setOnClickListener(<span class="keyword">new</span> View.OnClickListener()</div><div class="line">	&#123;</div><div class="line">		<span class="meta">@Override</span></div><div class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClick</span><span class="params">(View v)</span></span></div><div class="line">		&#123;</div><div class="line">			<span class="keyword">int</span> layoutPos = holder.getLayoutPosition();</div><div class="line">			onItemClickListener.onItemClick(v,position);</div><div class="line">		&#125;</div><div class="line">	&#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>第三步</strong> - RecyclerViewAdapter的部份完成之後，回到MainActivity就可以實作.onItemClickListener囉</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">RecycleViewAdapter mAdapter = <span class="keyword">new</span> RecycleViewAdapter(<span class="keyword">this</span>);</div><div class="line">mAdapter.setOnItemClickListener(<span class="keyword">new</span> RecycleViewAdapter.onItemClickListener()</div><div class="line">&#123;</div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onItemClick</span><span class="params">(View view, <span class="keyword">int</span> position)</span></span></div><div class="line">	&#123;</div><div class="line">		Log.d(<span class="string">"MYLOG"</span>, <span class="string">"onItemClick: "</span>+position);</div><div class="line">	&#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="大功告成"><a href="#大功告成" class="headerlink" title="大功告成!!"></a>大功告成!!</h3>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Android/">Android</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Interface/">Interface</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RecyclerView/">RecyclerView</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-PopupWindow" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/11/06/PopupWindow/" class="article-date">
+      <time datetime="2017-11-06T07:37:23.000Z" itemprop="datePublished">2017-11-06</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/06/PopupWindow/">PopupWindow</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="PopupWindow"><a href="#PopupWindow" class="headerlink" title="PopupWindow"></a>PopupWindow</h2><blockquote>
+<p>簡單介紹下就是阻塞式的浮動窗口(類似dialog，但dialog為非阻塞式)<br></p>
+</blockquote>
+<p><img src="https://cheankumio.gitbooks.io/kenny-code/content/assets/Screenshot_1500369441.jpg" alt=""></p>
+<p><br>視窗下面的(退出、設置、取消)就是PopupWindow產生的頁面，其特點是跳出時，只會響應目前PopupWindow介面上的操作，其他並不會繼續進行直到執行<code>dismiss()</code>。</p>
+<h4 id="PopupWindow-實作"><a href="#PopupWindow-實作" class="headerlink" title="PopupWindow 實作"></a>PopupWindow 實作</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// MainActivity.java</span></div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">AppCompatActivity</span> </span>&#123;</div><div class="line">Button btn;</div><div class="line">PopupWindow popupWindow;</div><div class="line">View rootView;</div><div class="line"></div><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span></span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">super</span>.onCreate(savedInstanceState);</div><div class="line">	setContentView(R.layout.activity_main);</div><div class="line"></div><div class="line">	btn = (Button) findViewById(R.id.button);</div><div class="line">	btn.setOnClickListener(<span class="keyword">new</span> View.OnClickListener()</div><div class="line">	&#123;</div><div class="line">		<span class="meta">@Override</span></div><div class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClick</span><span class="params">(View v)</span></span></div><div class="line">		&#123;</div><div class="line">			<span class="keyword">if</span> (popupWindow == <span class="keyword">null</span>)</div><div class="line">			&#123;</div><div class="line">				showPopup();</div><div class="line">			&#125; <span class="keyword">else</span> &#123;</div><div class="line">				popupWindow.showAtLocation(rootView, Gravity.BOTTOM, <span class="number">0</span>, <span class="number">0</span>);</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;);</div><div class="line">&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">showPopup</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="comment">// 載入popupwindow至view裡面</span></div><div class="line">		View view = LayoutInflater.from(<span class="keyword">this</span>).inflate(R.layout.popupwindow_layout, <span class="keyword">null</span>);</div><div class="line">		<span class="comment">// 產生一個popupwindow的實例</span></div><div class="line">		popupWindow = <span class="keyword">new</span> PopupWindow(<span class="keyword">this</span>);</div><div class="line">		<span class="comment">// 將view設定給新的popupwindow</span></div><div class="line">		popupWindow.setContentView(view);</div><div class="line">		<span class="comment">// 設定popupwindow的高度和寬度</span></div><div class="line">		popupWindow.setWidth(ViewGroup.LayoutParams.MATCH_PARENT);</div><div class="line">		popupWindow.setHeight(ViewGroup.LayoutParams.WRAP_CONTENT);</div><div class="line">		<span class="comment">// 取得主layout</span></div><div class="line">		rootView = LayoutInflater.from(<span class="keyword">this</span>).inflate(R.layout.activity_main, <span class="keyword">null</span>);</div><div class="line">		<span class="comment">// 顯示popupwindow至主layout (顯示於底部)</span></div><div class="line">		popupWindow.showAtLocation(rootView, Gravity.BOTTOM, <span class="number">0</span>, <span class="number">0</span>);</div><div class="line">		<span class="comment">// 設定為false則不響應除了popupwindow以外的touch事件</span></div><div class="line">		popupWindow.setOutsideTouchable(<span class="keyword">false</span>);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><hr><br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">// popupwindow的layout</div><div class="line">// popupwindow_layout.xml</div><div class="line"></div><div class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">LinearLayout</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span></div><div class="line"><span class="attr">android:orientation</span>=<span class="string">"vertical"</span> <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line"><span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span>&gt;</div><div class="line">	<span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line">		<span class="attr">android:id</span>=<span class="string">"@+id/tv_exit"</span></div><div class="line">		<span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line">		<span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">		<span class="attr">android:layout_marginBottom</span>=<span class="string">"2dp"</span></div><div class="line">		<span class="attr">android:layout_marginTop</span>=<span class="string">"2dp"</span></div><div class="line">		<span class="attr">android:gravity</span>=<span class="string">"center_horizontal"</span></div><div class="line">		<span class="attr">android:text</span>=<span class="string">"退出"</span></div><div class="line">		<span class="attr">android:textStyle</span>=<span class="string">"bold"</span> /&gt;</div><div class="line"></div><div class="line">	<span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line">		<span class="attr">android:id</span>=<span class="string">"@+id/tv_set"</span></div><div class="line">		<span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line">		<span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">		<span class="attr">android:layout_marginBottom</span>=<span class="string">"2dp"</span></div><div class="line">		<span class="attr">android:layout_marginTop</span>=<span class="string">"2dp"</span></div><div class="line">		<span class="attr">android:gravity</span>=<span class="string">"center_horizontal"</span></div><div class="line">		<span class="attr">android:text</span>=<span class="string">"设置"</span></div><div class="line">		<span class="attr">android:textStyle</span>=<span class="string">"bold"</span> /&gt;</div><div class="line"></div><div class="line">	<span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line">		<span class="attr">android:id</span>=<span class="string">"@+id/tv_cancel"</span></div><div class="line">		<span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line">		<span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">		<span class="attr">android:layout_marginBottom</span>=<span class="string">"2dp"</span></div><div class="line">		<span class="attr">android:layout_marginTop</span>=<span class="string">"2dp"</span></div><div class="line">		<span class="attr">android:gravity</span>=<span class="string">"center_horizontal"</span></div><div class="line">		<span class="attr">android:text</span>=<span class="string">"取消"</span></div><div class="line">		<span class="attr">android:textStyle</span>=<span class="string">"bold"</span> /&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>dialog為非阻塞式的窗口，也就是說執行dialog在start之後，下面的程式仍會繼續往下執行，並不會等到dialog被dismiss之後才執行，而popupwindow則會等到被dismiss之後才會繼續往下執行程式。</p>
+</blockquote>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Android/">Android</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PopupWindow/">PopupWindow</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-How-to-use-RecyclerView" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/11/06/How-to-use-RecyclerView/" class="article-date">
+      <time datetime="2017-11-06T07:26:05.000Z" itemprop="datePublished">2017-11-06</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/06/How-to-use-RecyclerView/">How to use RecyclerView</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="RecyclerView"><a href="#RecyclerView" class="headerlink" title="RecyclerView"></a>RecyclerView</h2><blockquote>
+<p>類似ListView及GridView，甚至能夠取代他們</p>
+</blockquote>
+<h5 id="RecyclerView-需要實作-RecyclerView-Adapter及Adapter的ViewHolder"><a href="#RecyclerView-需要實作-RecyclerView-Adapter及Adapter的ViewHolder" class="headerlink" title="RecyclerView 需要實作 RecyclerView.Adapter及Adapter的ViewHolder"></a>RecyclerView 需要實作 RecyclerView.Adapter及Adapter的ViewHolder</h5><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">// activity_layout.xml</div><div class="line"></div><div class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">LinearLayout</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span></div><div class="line"><span class="attr">android:orientation</span>=<span class="string">"vertical"</span> <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line"><span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span>&gt;</div><div class="line"></div><div class="line">	<span class="tag">&lt;<span class="name">android.support.v7.widget.RecyclerView</span></span></div><div class="line">	<span class="attr">android:id</span>=<span class="string">"@+id/recycleview"</span></div><div class="line">	<span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line">	<span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span> /&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></div></pre></td></tr></table></figure>
+<h5 id="拉好RecyclerView元件之後，還要建立item"><a href="#拉好RecyclerView元件之後，還要建立item" class="headerlink" title="拉好RecyclerView元件之後，還要建立item"></a>拉好RecyclerView元件之後，還要建立item</h5><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">// item.xml</div><div class="line"></div><div class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">LinearLayout</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span></div><div class="line">	<span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line">	<span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">	<span class="attr">android:gravity</span>=<span class="string">"center_horizontal"</span>&gt;</div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line">	<span class="attr">android:id</span>=<span class="string">"@+id/textView2"</span></div><div class="line">	<span class="attr">android:layout_width</span>=<span class="string">"wrap_content"</span></div><div class="line">	<span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">	<span class="attr">android:text</span>=<span class="string">"TextView"</span></div><div class="line">	<span class="attr">android:textColor</span>=<span class="string">"#111111"</span></div><div class="line">	<span class="attr">android:textSize</span>=<span class="string">"16sp"</span></div><div class="line">	<span class="attr">android:textStyle</span>=<span class="string">"bold"</span> /&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></div></pre></td></tr></table></figure>
+<h5 id="介面都完成後，就要開始打程式囉"><a href="#介面都完成後，就要開始打程式囉" class="headerlink" title="介面都完成後，就要開始打程式囉!"></a>介面都完成後，就要開始打程式囉!</h5><ul>
+<li>首先建立一個RecyclerViewAdapter.java</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RecycleViewAdapter</span> <span class="keyword">extends</span> <span class="title">RecyclerView</span>.<span class="title">Adapter</span>&lt;<span class="title">RecycleViewAdapter</span>.<span class="title">MyViewHolder</span>&gt; </span>&#123;</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="title">RecycleViewAdapter</span><span class="params">(Context context)</span> </span>&#123;</div><div class="line">	<span class="keyword">this</span>.context = context;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 這部份主要寫綁定layout的程式</span></div><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="keyword">public</span> RecycleViewAdapter.<span class="function">MyViewHolder <span class="title">onCreateViewHolder</span><span class="params">(ViewGroup parent, <span class="keyword">int</span> viewType)</span> </span>&#123;</div><div class="line">	<span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 上面綁定layout後，在這裡實作物件功能</span></div><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onBindViewHolder</span><span class="params">(<span class="keyword">final</span> RecycleViewAdapter.MyViewHolder holder, <span class="keyword">final</span> <span class="keyword">int</span> position)</span> </span>&#123;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 執行的總次數</span></div><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getItemCount</span><span class="params">()</span> </span>&#123;</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 自己寫ViewHolder來綁定控件</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyViewHolder</span> <span class="keyword">extends</span> <span class="title">RecyclerView</span>.<span class="title">ViewHolder</span> </span>&#123;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="title">MyViewHolder</span><span class="params">(View view)</span> </span>&#123;</div><div class="line">		<span class="keyword">super</span>(view);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="建立好之後就一個一個來修改囉"><a href="#建立好之後就一個一個來修改囉" class="headerlink" title="建立好之後就一個一個來修改囉"></a>建立好之後就一個一個來修改囉</h4><ul>
+<li><p><strong>第一步</strong> - 這個CreateViewHolder是當item被建立的時候會執行一次，這裡通常做綁定layout的功能</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="keyword">public</span> RecycleViewAdapter.<span class="function">MyViewHolder <span class="title">onCreateViewHolder</span><span class="params">(ViewGroup parent, <span class="keyword">int</span> viewType)</span> </span>&#123;</div><div class="line">	MyViewHolder holder = <span class="keyword">new</span> MyViewHolder(LayoutInflater.from(context).inflate(R.layout.item,parent,<span class="keyword">false</span>));</div><div class="line">	<span class="keyword">return</span> holder;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>第二步</strong> - 取得holder之後，需要自己寫一個class -&gt; MyViewHolder來獲得layout上的元件</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyViewHolder</span> <span class="keyword">extends</span> <span class="title">RecyclerView</span>.<span class="title">ViewHolder</span> </span>&#123;</div><div class="line">	TextView tv;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="title">MyViewHolder</span><span class="params">(View view)</span> </span>&#123;</div><div class="line">		<span class="keyword">super</span>(view);</div><div class="line">		tv = (TextView) view.findViewById(R.id.textView2);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><p><strong>第三步</strong> - 元件之後就可以在onBindViewHolder寫要對元件做的事情了</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onBindViewHolder</span><span class="params">(<span class="keyword">final</span> RecycleViewAdapter.MyViewHolder holder, <span class="keyword">final</span> <span class="keyword">int</span> position)</span> </span>&#123;</div><div class="line">	<span class="comment">// tv就是上面MyViewHolder宣告的TextView</span></div><div class="line">	<span class="comment">// holder就是最上面onCreateViewHolder取得到的holder</span></div><div class="line">	holder.tv.setText(<span class="string">"Count: "</span>+position);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>第四步</strong> - 最重要的三步都完成了，再來是更重要的最後一部</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getItemCount</span><span class="params">()</span> </span>&#123;</div><div class="line">	<span class="comment">// 總共執行的次數，這會影響到產生的物件數量，如果這邊給0，那RecyclerView就不會顯示任何東西</span></div><div class="line">	<span class="keyword">return</span> <span class="number">20</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="完成了之後，我們需要把RecyclerViewAdapter指定給RecyclerView"><a href="#完成了之後，我們需要把RecyclerViewAdapter指定給RecyclerView" class="headerlink" title="完成了之後，我們需要把RecyclerViewAdapter指定給RecyclerView"></a>完成了之後，我們需要把RecyclerViewAdapter指定給RecyclerView</h4><ul>
+<li>回到MainActivity.java</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 進行RecyclerView物件綁定</span></div><div class="line">RecyclerView mRecyclerView = (RecyclerView) view.findViewById(R.id.recycleview);</div><div class="line"><span class="comment">// 棋盤式</span></div><div class="line"><span class="comment">//RecyclerView.LayoutManager layoutManager = new GridLayoutManager(this,4);</span></div><div class="line"><span class="comment">// 瀑布式</span></div><div class="line"><span class="comment">//RecyclerView.LayoutManager layoutManager = new StaggeredGridLayoutManager(4,StaggeredGridLayoutManager.VERTICAL);</span></div><div class="line"><span class="comment">// 線性 ( 這裡用線性做範例 )</span></div><div class="line">RecyclerView.LayoutManager layoutManager = <span class="keyword">new</span> LinearLayoutManager(<span class="keyword">this</span>);</div><div class="line"></div><div class="line">mRecyclerView.setLayoutManager(layoutManager);</div><div class="line"></div><div class="line">RecycleViewAdapter mAdapter = <span class="keyword">new</span> RecycleViewAdapter(<span class="keyword">this</span>);</div><div class="line">mRecyclerView.setAdapter(mAdapter);</div></pre></td></tr></table></figure>
+<h4 id="大功告成"><a href="#大功告成" class="headerlink" title="大功告成"></a>大功告成</h4><p><img src="https://cheankumio.gitbooks.io/kenny-code/content/assets/device-2017-07-19-170648.gif" alt=""></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Android/">Android</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RecyclerView/">RecyclerView</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Control-widget-position" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/11/06/Control-widget-position/" class="article-date">
+      <time datetime="2017-11-06T07:24:38.000Z" itemprop="datePublished">2017-11-06</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/06/Control-widget-position/">Control widget position</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="控制控件位置"><a href="#控制控件位置" class="headerlink" title="控制控件位置"></a>控制控件位置</h2><blockquote>
+<p>實現物件移動方法，使用<code>Math.sin</code>去做一個曲線讓物件可以順暢的上下位移。</p>
+</blockquote>
+<p><code>activity_main.xml</code> - 只要拉出一個<code>Button</code> 即可。<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">Button</span></span></div><div class="line">	<span class="attr">android:id</span>=<span class="string">"@+id/button2"</span></div><div class="line">	<span class="attr">android:layout_width</span>=<span class="string">"80dp"</span></div><div class="line">	<span class="attr">android:layout_height</span>=<span class="string">"80dp"</span></div><div class="line">	<span class="attr">android:text</span>=<span class="string">"Button"</span> /&gt;</div></pre></td></tr></table></figure></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line">Button btn2;</div><div class="line"><span class="keyword">int</span> values = <span class="number">1</span>;</div><div class="line"><span class="keyword">boolean</span> isRunning = <span class="keyword">false</span>;</div><div class="line"></div><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</div><div class="line">	<span class="keyword">super</span>.onCreate(savedInstanceState);</div><div class="line">	setContentView(R.layout.activity_main);</div><div class="line">	btn2 = (Button) findViewById(R.id.button2);</div><div class="line">	btn2.setOnClickListener(<span class="keyword">new</span> View.OnClickListener()</div><div class="line">	&#123;</div><div class="line">		<span class="meta">@Override</span></div><div class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClick</span><span class="params">(View v)</span></span></div><div class="line">		&#123;</div><div class="line">			<span class="keyword">if</span> (isrunning)</div><div class="line">			&#123;</div><div class="line">				isRunning = <span class="keyword">false</span>;</div><div class="line">				nhandler.removeCallbacks(runnable);</div><div class="line">			&#125; <span class="keyword">else</span> &#123;</div><div class="line">				isRunning = <span class="keyword">true</span>;</div><div class="line">				nhandler.post(runnable);</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;);</div><div class="line">&#125;</div><div class="line">Handler nhandler = <span class="keyword">new</span> Handler();</div><div class="line">Runnable runnable = <span class="keyword">new</span> Runnable() </div><div class="line">&#123;</div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span></div><div class="line">	&#123;</div><div class="line">		<span class="keyword">if</span> (values &lt; <span class="number">190</span>)</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">float</span> fff = (<span class="keyword">float</span>) (Math.sin((<span class="keyword">double</span>) values * <span class="number">0.1</span>) * <span class="number">50</span>) + btn2.getTop();</div><div class="line">			btn2.setY(fff);</div><div class="line">			values++;</div><div class="line">		&#125; <span class="keyword">else</span> &#123;</div><div class="line">			values = <span class="number">1</span>;</div><div class="line">		&#125;</div><div class="line">		nhandler.postDelayed(<span class="keyword">this</span>, <span class="number">10</span>);</div><div class="line">	&#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p><strong> 實現效果 </strong></p>
+<p><img src="https://cheankumio.gitbooks.io/kenny-code/content/assets/20170831_164225.gif" alt=""></p>
+<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>透過<code>Handler</code>及<code>Runnable</code>來達成不斷移動的效果<br>重點在於 -&gt; <code>Math.sin((double) values * 0.1) * 50</code><br>因為<code>sin</code>帶入<code>1</code>,<code>2</code>,<code>3</code>數值會是正數，當數值增加到<code>4</code>,<code>5</code>,<code>6</code>的時候數值會變成負數<br>所以<code>values * 0.1</code> 是為了讓物體位移的距離更小，達成一個滑順的位移效果<br>而在後面的<code>* 50</code> 則是為了讓移動幅度增加的一個附加值。</p>
+<hr>
+<h4 id="移動的物體"><a href="#移動的物體" class="headerlink" title="移動的物體"></a>移動的物體</h4><blockquote>
+<p>如果可以上下移動，那只要控制X軸，那就能左右移動囉!!</p>
+</blockquote>
+<p>這邊使用的是Tangent，因為Tangent的曲線是平穩-&gt;急昇<br>( 可以讓物體由慢到快的移動 )</p>
+<p>實現的部分，程式碼多加上一點點東西即可。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">Handler nhandler = <span class="keyword">new</span> Handler();</div><div class="line">Runnable runnable = <span class="keyword">new</span> Runnable() &#123;</div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span></div><div class="line">	&#123;</div><div class="line">		<span class="keyword">if</span> (values &lt; <span class="number">190</span>)</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">float</span> fff = (<span class="keyword">float</span>) (Math.sin((<span class="keyword">double</span>) values * <span class="number">0.1</span>) * <span class="number">50</span>) + btn2.getTop();</div><div class="line">			<span class="keyword">float</span> ttt = (<span class="keyword">float</span>) (Math.tan((<span class="keyword">double</span>) values * <span class="number">0.01</span>) * <span class="number">50</span>);</div><div class="line">			btn2.setY(fff);</div><div class="line">			btn2.setX(ttt);</div><div class="line">			values++;</div><div class="line">		&#125; <span class="keyword">else</span> &#123;</div><div class="line">			values = <span class="number">1</span>;</div><div class="line">		&#125;</div><div class="line">		nhandler.postDelayed(<span class="keyword">this</span>, <span class="number">10</span>);</div><div class="line">	&#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p><strong> 實現效果 ( Gif有點 lag請見諒 )</strong></p>
+<p><img src="https://cheankumio.gitbooks.io/kenny-code/content/assets/20170831_170526.gif" alt=""></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Android/">Android</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Animation/">Animation</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Button-Style-Design" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/11/06/Button-Style-Design/" class="article-date">
+      <time datetime="2017-11-06T07:22:23.000Z" itemprop="datePublished">2017-11-06</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/06/Button-Style-Design/">Button Style Design</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="Button-按鈕設計"><a href="#Button-按鈕設計" class="headerlink" title="Button 按鈕設計"></a>Button 按鈕設計</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">selector</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">item</span> <span class="attr">android:drawable</span>=<span class="string">"@color/filters_buttons_selected"</span> <span class="attr">android:state_pressed</span>=<span class="string">"true"</span> /&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">item</span> <span class="attr">android:drawable</span>=<span class="string">"@color/filters_buttons"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">selector</span>&gt;</span></div></pre></td></tr></table></figure>
+<p><code>android:state_pressed=&quot;true&quot;</code> 屬性是按下後的顏色變化<br><img src="https://cheankumio.gitbooks.io/kenny-code/content/assets/20170822_101548.gif" alt=""></p>
+<p>這樣就可以幫按鈕添加自訂色彩，如果使用的是imageButton<br>可以在<code>android:src=&quot; ... &quot;</code>設定圖片資源，即可設計出簡單美觀的自訂按鈕</p>
+<hr>
+<h3 id="設定圓角"><a href="#設定圓角" class="headerlink" title="設定圓角"></a>設定圓角</h3><blockquote>
+<p>如果要設定圓角及其他特效，就不能直接於<code>item</code>之後設定<code>android:drawable=&quot;xx&quot;</code>，否則其他設定都會被這個顏色給覆蓋。</p>
+</blockquote>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">selector</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span>&gt;</span></div><div class="line">	<span class="comment">&lt;!-- 按下後的狀態 --&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">item</span> <span class="attr">android:state_pressed</span>=<span class="string">"true"</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">shape</span> <span class="attr">android:shape</span>=<span class="string">"rectangle"</span>&gt;</span></div><div class="line">			<span class="comment">&lt;!-- 該按鈕按下後的顏色 --&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">solid</span> <span class="attr">android:color</span>=<span class="string">"@color/dred"</span>/&gt;</span></div><div class="line">			<span class="comment">&lt;!-- 圓角呈度 --&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">corners</span> <span class="attr">android:radius</span>=<span class="string">"30dp"</span> /&gt;</span></div><div class="line">			<span class="comment">&lt;!-- 邊框寬度和顏色 --&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">stroke</span> <span class="attr">android:width</span>=<span class="string">"2dp"</span> <span class="attr">android:color</span>=<span class="string">"#538394"</span> /&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">shape</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">item</span>&gt;</span></div><div class="line"></div><div class="line">	<span class="comment">&lt;!-- 預設的狀態 --&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">item</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">shape</span> <span class="attr">android:shape</span>=<span class="string">"rectangle"</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">corners</span> <span class="attr">android:radius</span>=<span class="string">"30dp"</span> /&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">solid</span> <span class="attr">android:color</span>=<span class="string">"@color/fred"</span>/&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">stroke</span> <span class="attr">android:width</span>=<span class="string">"2dp"</span> <span class="attr">android:color</span>=<span class="string">"#538394"</span> /&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">shape</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">item</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">selector</span>&gt;</span></div></pre></td></tr></table></figure>
+<p><strong> 實現效果 </strong></p>
+<p><img src="https://cheankumio.gitbooks.io/kenny-code/content/assets/20170822_104509.gif" alt=""></p>
+<hr>
+<h3 id="設定圓型Button及漸層色彩"><a href="#設定圓型Button及漸層色彩" class="headerlink" title="設定圓型Button及漸層色彩"></a>設定圓型Button及漸層色彩</h3><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</div><div class="line">&lt;selector xmlns:android="http://schemas.android.com/apk/res/android"&gt;</div><div class="line">	&lt;item android:state_pressed="true"&gt;</div><div class="line">		&lt;!-- 設定為圓型型狀 shape="oval" --&gt;</div><div class="line">		&lt;shape android:shape="oval"&gt;</div><div class="line">			&lt;!-- 起始色彩為 #0A9BCD --&gt;</div><div class="line">			&lt;gradient android:startColor="#0A9BCD"</div><div class="line">			&lt;!-- 最終色彩為 #083B4D--&gt;</div><div class="line">			android:endColor="#083B4D"</div><div class="line">			&lt;!-- 漸層半徑 --&gt;</div><div class="line">			android:gradientRadius="60dp"</div><div class="line">			&lt;!-- 漸層模式 --&gt;</div><div class="line">			android:type="radial"/&gt;</div><div class="line">			&lt;corners android:radius="30dp" /&gt;</div><div class="line">			&lt;stroke android:width="2dp" android:color="@color/strokec" /&gt;</div><div class="line">		&lt;/shape&gt;</div><div class="line">	&lt;/item&gt;</div><div class="line"></div><div class="line">	&lt;item &gt;</div><div class="line">		&lt;shape android:shape="oval"&gt;</div><div class="line">			&lt;corners android:radius="10dp" /&gt;</div><div class="line">			&lt;solid android:color="#0A9BCD"/&gt;</div><div class="line">			&lt;stroke android:width="2dp" android:color="@color/strokec" /&gt;</div><div class="line">		&lt;/shape&gt;</div><div class="line">	&lt;/item&gt;</div><div class="line">&lt;/selector&gt;</div></pre></td></tr></table></figure>
+<p><strong> 實現效果 </strong></p>
+<p><img src="https://cheankumio.gitbooks.io/kenny-code/content/assets/20170822_105739.gif" alt=""></p>
+<hr>
+<h3 id="交叉使用"><a href="#交叉使用" class="headerlink" title="交叉使用"></a>交叉使用</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">selector</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">item</span> <span class="attr">android:state_pressed</span>=<span class="string">"true"</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">shape</span> <span class="attr">android:shape</span>=<span class="string">"oval"</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">gradient</span> <span class="attr">android:startColor</span>=<span class="string">"#0A9BCD"</span></span></div><div class="line">				<span class="attr">android:endColor</span>=<span class="string">"#083B4D"</span></div><div class="line">				<span class="attr">android:gradientRadius</span>=<span class="string">"60dp"</span></div><div class="line">				<span class="attr">android:type</span>=<span class="string">"radial"</span>/&gt;</div><div class="line">			<span class="tag">&lt;<span class="name">stroke</span> <span class="attr">android:width</span>=<span class="string">"2dp"</span> <span class="attr">android:color</span>=<span class="string">"@color/strokec"</span> /&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">shape</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">item</span>&gt;</span></div><div class="line"></div><div class="line">	<span class="tag">&lt;<span class="name">item</span> &gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">shape</span> <span class="attr">android:shape</span>=<span class="string">"rectangle"</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">corners</span> <span class="attr">android:radius</span>=<span class="string">"20dp"</span> /&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">solid</span> <span class="attr">android:color</span>=<span class="string">"#0A9BCD"</span>/&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">stroke</span> <span class="attr">android:width</span>=<span class="string">"2dp"</span> <span class="attr">android:color</span>=<span class="string">"@color/strokec"</span> /&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">shape</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">item</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">selector</span>&gt;</span></div></pre></td></tr></table></figure>
+<p><strong> 實現效果 </strong></p>
+<p><img src="https://cheankumio.gitbooks.io/kenny-code/content/assets/20170822_110918.gif" alt=""></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Android/">Android</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Button/">Button</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Design/">Design</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 </div>
       <footer id="footer">
