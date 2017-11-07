@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="KuanLin" />
+
+
+
+<meta name="description" content="RecyclerView 類似ListView及GridView，甚至能夠取代他們  RecyclerView 需要實作 RecyclerView.Adapter及Adapter的ViewHolder123456789101112// activity_layout.xml&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&amp;gt;&amp;lt;LinearLayout xm">
+<meta name="keywords" content="Android,RecyclerView">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to use RecyclerView">
+<meta property="og:url" content="https://cheankumio.github.io/How-to-use-RecyclerView/index.html">
+<meta property="og:site_name" content="K.L. Developer Blog">
+<meta property="og:description" content="RecyclerView 類似ListView及GridView，甚至能夠取代他們  RecyclerView 需要實作 RecyclerView.Adapter及Adapter的ViewHolder123456789101112// activity_layout.xml&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&amp;gt;&amp;lt;LinearLayout xm">
+<meta property="og:locale" content="zh-Hant-TW">
+<meta property="og:image" content="https://cheankumio.gitbooks.io/kenny-code/content/assets/device-2017-07-19-170648.gif">
+<meta property="og:updated_time" content="2017-11-06T07:47:24.249Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How to use RecyclerView">
+<meta name="twitter:description" content="RecyclerView 類似ListView及GridView，甚至能夠取代他們  RecyclerView 需要實作 RecyclerView.Adapter及Adapter的ViewHolder123456789101112// activity_layout.xml&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&amp;gt;&amp;lt;LinearLayout xm">
+<meta name="twitter:image" content="https://cheankumio.gitbooks.io/kenny-code/content/assets/device-2017-07-19-170648.gif">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="K.L. Developer Blog" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>How to use RecyclerView | K.L. Developer Blog</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: true
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">KuanLin</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">Android &amp; Java &amp; Programing..</p>
+        
+
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜單</li>
+                        <li>標籤</li>
+                        
+                        <li>友情鏈接</li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主頁</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">標籤雲</a></li>
+                        
+                            <li><a href="/about/">關於我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:4ndroid4ppdev@gmail.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="https://github.com/cheankumio" title="GitHub"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Animation/">Animation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bitmap/">Bitmap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Button/">Button</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Design/">Design</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/EvenBus/">EvenBus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Facebook/">Facebook</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Fragment/">Fragment</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Interface/">Interface</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PopupWindow/">PopupWindow</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RecyclerView/">RecyclerView</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RxJava/">RxJava</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Volley/">Volley</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fontsize/">fontsize</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/memory/">memory</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">KuanLin</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">KuanLin</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">Android &amp; Java &amp; Programing..</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主頁</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">標籤雲</a></li>
+                
+                    <li><a href="/about/">關於我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:4ndroid4ppdev@gmail.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/cheankumio" title="GitHub"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="標籤" friends="友情鏈接" about="關於我"/>
+</nav>
+      <div class="body-wrap"><article id="post-How-to-use-RecyclerView" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/How-to-use-RecyclerView/" class="article-date">
+      <time datetime="2017-11-06T07:26:05.000Z" itemprop="datePublished">2017-11-06</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      How to use RecyclerView
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Android/">Android</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RecyclerView/">RecyclerView</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="RecyclerView"><a href="#RecyclerView" class="headerlink" title="RecyclerView"></a>RecyclerView</h2><blockquote>
+<p>類似ListView及GridView，甚至能夠取代他們</p>
+</blockquote>
+<h5 id="RecyclerView-需要實作-RecyclerView-Adapter及Adapter的ViewHolder"><a href="#RecyclerView-需要實作-RecyclerView-Adapter及Adapter的ViewHolder" class="headerlink" title="RecyclerView 需要實作 RecyclerView.Adapter及Adapter的ViewHolder"></a>RecyclerView 需要實作 RecyclerView.Adapter及Adapter的ViewHolder</h5><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">// activity_layout.xml</div><div class="line"></div><div class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">LinearLayout</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span></div><div class="line"><span class="attr">android:orientation</span>=<span class="string">"vertical"</span> <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line"><span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span>&gt;</div><div class="line"></div><div class="line">	<span class="tag">&lt;<span class="name">android.support.v7.widget.RecyclerView</span></span></div><div class="line">	<span class="attr">android:id</span>=<span class="string">"@+id/recycleview"</span></div><div class="line">	<span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line">	<span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span> /&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></div></pre></td></tr></table></figure>
+<h5 id="拉好RecyclerView元件之後，還要建立item"><a href="#拉好RecyclerView元件之後，還要建立item" class="headerlink" title="拉好RecyclerView元件之後，還要建立item"></a>拉好RecyclerView元件之後，還要建立item</h5><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">// item.xml</div><div class="line"></div><div class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">LinearLayout</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span></div><div class="line">	<span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line">	<span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">	<span class="attr">android:gravity</span>=<span class="string">"center_horizontal"</span>&gt;</div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line">	<span class="attr">android:id</span>=<span class="string">"@+id/textView2"</span></div><div class="line">	<span class="attr">android:layout_width</span>=<span class="string">"wrap_content"</span></div><div class="line">	<span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">	<span class="attr">android:text</span>=<span class="string">"TextView"</span></div><div class="line">	<span class="attr">android:textColor</span>=<span class="string">"#111111"</span></div><div class="line">	<span class="attr">android:textSize</span>=<span class="string">"16sp"</span></div><div class="line">	<span class="attr">android:textStyle</span>=<span class="string">"bold"</span> /&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></div></pre></td></tr></table></figure>
+<h5 id="介面都完成後，就要開始打程式囉"><a href="#介面都完成後，就要開始打程式囉" class="headerlink" title="介面都完成後，就要開始打程式囉!"></a>介面都完成後，就要開始打程式囉!</h5><ul>
+<li>首先建立一個RecyclerViewAdapter.java</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RecycleViewAdapter</span> <span class="keyword">extends</span> <span class="title">RecyclerView</span>.<span class="title">Adapter</span>&lt;<span class="title">RecycleViewAdapter</span>.<span class="title">MyViewHolder</span>&gt; </span>&#123;</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="title">RecycleViewAdapter</span><span class="params">(Context context)</span> </span>&#123;</div><div class="line">	<span class="keyword">this</span>.context = context;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 這部份主要寫綁定layout的程式</span></div><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="keyword">public</span> RecycleViewAdapter.<span class="function">MyViewHolder <span class="title">onCreateViewHolder</span><span class="params">(ViewGroup parent, <span class="keyword">int</span> viewType)</span> </span>&#123;</div><div class="line">	<span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 上面綁定layout後，在這裡實作物件功能</span></div><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onBindViewHolder</span><span class="params">(<span class="keyword">final</span> RecycleViewAdapter.MyViewHolder holder, <span class="keyword">final</span> <span class="keyword">int</span> position)</span> </span>&#123;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 執行的總次數</span></div><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getItemCount</span><span class="params">()</span> </span>&#123;</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 自己寫ViewHolder來綁定控件</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyViewHolder</span> <span class="keyword">extends</span> <span class="title">RecyclerView</span>.<span class="title">ViewHolder</span> </span>&#123;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="title">MyViewHolder</span><span class="params">(View view)</span> </span>&#123;</div><div class="line">		<span class="keyword">super</span>(view);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="建立好之後就一個一個來修改囉"><a href="#建立好之後就一個一個來修改囉" class="headerlink" title="建立好之後就一個一個來修改囉"></a>建立好之後就一個一個來修改囉</h4><ul>
+<li><p><strong>第一步</strong> - 這個CreateViewHolder是當item被建立的時候會執行一次，這裡通常做綁定layout的功能</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="keyword">public</span> RecycleViewAdapter.<span class="function">MyViewHolder <span class="title">onCreateViewHolder</span><span class="params">(ViewGroup parent, <span class="keyword">int</span> viewType)</span> </span>&#123;</div><div class="line">	MyViewHolder holder = <span class="keyword">new</span> MyViewHolder(LayoutInflater.from(context).inflate(R.layout.item,parent,<span class="keyword">false</span>));</div><div class="line">	<span class="keyword">return</span> holder;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>第二步</strong> - 取得holder之後，需要自己寫一個class -&gt; MyViewHolder來獲得layout上的元件</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyViewHolder</span> <span class="keyword">extends</span> <span class="title">RecyclerView</span>.<span class="title">ViewHolder</span> </span>&#123;</div><div class="line">	TextView tv;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="title">MyViewHolder</span><span class="params">(View view)</span> </span>&#123;</div><div class="line">		<span class="keyword">super</span>(view);</div><div class="line">		tv = (TextView) view.findViewById(R.id.textView2);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><p><strong>第三步</strong> - 元件之後就可以在onBindViewHolder寫要對元件做的事情了</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onBindViewHolder</span><span class="params">(<span class="keyword">final</span> RecycleViewAdapter.MyViewHolder holder, <span class="keyword">final</span> <span class="keyword">int</span> position)</span> </span>&#123;</div><div class="line">	<span class="comment">// tv就是上面MyViewHolder宣告的TextView</span></div><div class="line">	<span class="comment">// holder就是最上面onCreateViewHolder取得到的holder</span></div><div class="line">	holder.tv.setText(<span class="string">"Count: "</span>+position);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>第四步</strong> - 最重要的三步都完成了，再來是更重要的最後一部</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getItemCount</span><span class="params">()</span> </span>&#123;</div><div class="line">	<span class="comment">// 總共執行的次數，這會影響到產生的物件數量，如果這邊給0，那RecyclerView就不會顯示任何東西</span></div><div class="line">	<span class="keyword">return</span> <span class="number">20</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="完成了之後，我們需要把RecyclerViewAdapter指定給RecyclerView"><a href="#完成了之後，我們需要把RecyclerViewAdapter指定給RecyclerView" class="headerlink" title="完成了之後，我們需要把RecyclerViewAdapter指定給RecyclerView"></a>完成了之後，我們需要把RecyclerViewAdapter指定給RecyclerView</h4><ul>
+<li>回到MainActivity.java</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 進行RecyclerView物件綁定</span></div><div class="line">RecyclerView mRecyclerView = (RecyclerView) view.findViewById(R.id.recycleview);</div><div class="line"><span class="comment">// 棋盤式</span></div><div class="line"><span class="comment">//RecyclerView.LayoutManager layoutManager = new GridLayoutManager(this,4);</span></div><div class="line"><span class="comment">// 瀑布式</span></div><div class="line"><span class="comment">//RecyclerView.LayoutManager layoutManager = new StaggeredGridLayoutManager(4,StaggeredGridLayoutManager.VERTICAL);</span></div><div class="line"><span class="comment">// 線性 ( 這裡用線性做範例 )</span></div><div class="line">RecyclerView.LayoutManager layoutManager = <span class="keyword">new</span> LinearLayoutManager(<span class="keyword">this</span>);</div><div class="line"></div><div class="line">mRecyclerView.setLayoutManager(layoutManager);</div><div class="line"></div><div class="line">RecycleViewAdapter mAdapter = <span class="keyword">new</span> RecycleViewAdapter(<span class="keyword">this</span>);</div><div class="line">mRecyclerView.setAdapter(mAdapter);</div></pre></td></tr></table></figure>
+<h4 id="大功告成"><a href="#大功告成" class="headerlink" title="大功告成"></a>大功告成</h4><p><img src="https://cheankumio.gitbooks.io/kenny-code/content/assets/device-2017-07-19-170648.gif" alt=""></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文標題:</span><a href="/How-to-use-RecyclerView/">How to use RecyclerView</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主頁">KuanLin</a></p>
+        <p><span>發布時間:</span>2017-11-06, 15:26:05</p>
+        <p><span>最後更新:</span>2017-11-06, 15:47:24</p>
+        <p>
+            <span>原始鏈接:</span><a class="post-url" href="/How-to-use-RecyclerView/" title="How to use RecyclerView">https://cheankumio.github.io/How-to-use-RecyclerView/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://cheankumio.github.io/How-to-use-RecyclerView/　　作者: KuanLin" title="點擊複製文章鏈接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>許可協議:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"姓名標示-非商業性-相同方式分享 4.0 國際"</a> 轉載請保留原文鏈接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/PopupWindow/">
+                    PopupWindow
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/Control-widget-position/">
+                    Control widget position
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目錄</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#RecyclerView"><span class="toc-number">1.</span> <span class="toc-text">RecyclerView</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#RecyclerView-需要實作-RecyclerView-Adapter及Adapter的ViewHolder"><span class="toc-number">1.0.0.1.</span> <span class="toc-text">RecyclerView 需要實作 RecyclerView.Adapter及Adapter的ViewHolder</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#拉好RecyclerView元件之後，還要建立item"><span class="toc-number">1.0.0.2.</span> <span class="toc-text">拉好RecyclerView元件之後，還要建立item</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#介面都完成後，就要開始打程式囉"><span class="toc-number">1.0.0.3.</span> <span class="toc-text">介面都完成後，就要開始打程式囉!</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#建立好之後就一個一個來修改囉"><span class="toc-number">1.0.1.</span> <span class="toc-text">建立好之後就一個一個來修改囉</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#完成了之後，我們需要把RecyclerViewAdapter指定給RecyclerView"><span class="toc-number">1.0.2.</span> <span class="toc-text">完成了之後，我們需要把RecyclerViewAdapter指定給RecyclerView</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#大功告成"><span class="toc-number">1.0.3.</span> <span class="toc-text">大功告成</span></a></li></ol></li></ol></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隱藏目錄"  title="點擊按鈕隱藏或者顯示文章目錄">
+
+    <script>
+        yiliaConfig.toc = ["隱藏目錄", "顯示目錄", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"How to use RecyclerView　| K.L. Developer Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/PopupWindow/" title="上一篇: PopupWindow">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/Control-widget-position/" title="下一篇: Control widget position">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/Facebook-Account-Kit-Use-Guide/">Facebook Account Kit Use Guide</a></li><li class="post-list-item"><a class="post-list-link" href="/解決Android系統預設字體過大影響佈局問題/">解決Android系統預設字體過大影響佈局問題</a></li><li class="post-list-item"><a class="post-list-link" href="/Bitmap占用記憶體計算/">Bitmap占用記憶體計算</a></li><li class="post-list-item"><a class="post-list-link" href="/Fragment-EvenBus/">Fragment & EvenBus</a></li><li class="post-list-item"><a class="post-list-link" href="/Volley-use-guide/">Volley use guide</a></li><li class="post-list-item"><a class="post-list-link" href="/onItemClickListener-for-RecyclerView/">onItemClickListener for RecyclerView</a></li><li class="post-list-item"><a class="post-list-link" href="/PopupWindow/">PopupWindow</a></li><li class="post-list-item"><a class="post-list-link" href="/How-to-use-RecyclerView/">How to use RecyclerView</a></li><li class="post-list-item"><a class="post-list-link" href="/Control-widget-position/">Control widget position</a></li><li class="post-list-item"><a class="post-list-link" href="/Button-Style-Design/">Button Style Design</a></li><li class="post-list-item"><a class="post-list-link" href="/RxJava-Thread-Control/">RxJava_Thread_Control</a></li><li class="post-list-item"><a class="post-list-link" href="/RxJava/">RxJava</a></li><li class="post-list-item"><a class="post-list-link" href="/MyFirstPost/">MyFirstPost</a></li><li class="post-list-item"><a class="post-list-link" href="/hello-world/">Hello World</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2017 KuanLin
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、簡單且強大的網誌框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="簡而不減 Hexo 雙欄網誌主題  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="本站到訪數"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="本頁閱讀量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回頂部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看評論"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="轉到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>

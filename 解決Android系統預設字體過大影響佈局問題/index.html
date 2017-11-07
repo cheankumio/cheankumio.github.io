@@ -15,16 +15,18 @@
 
 
 
-<meta name="description" content="程式學習日誌、技術研究分享">
-<meta property="og:type" content="website">
-<meta property="og:title" content="K.L. Developer Blog">
-<meta property="og:url" content="https://cheankumio.github.io/archives/2017/11/index.html">
+<meta name="description" content="解決 Android 系統字體影響布局問題 2017/10/31 於教育訓練後遇到的問題，某些使用者將系統預設字體設定為 [極大] ，或者其他導致佈局混亂的大小，導致某些功能無法正常使用(被遮掩)。  解決辦法是 Configuration 藉由取得系統Configuration以及其fontScale來做判斷，進而取得控制佈局的可能。 以下直接以程式碼作範例: 12345678910111213">
+<meta name="keywords" content="Android,fontsize">
+<meta property="og:type" content="article">
+<meta property="og:title" content="解決Android系統預設字體過大影響佈局問題">
+<meta property="og:url" content="https://cheankumio.github.io/解決Android系統預設字體過大影響佈局問題/index.html">
 <meta property="og:site_name" content="K.L. Developer Blog">
-<meta property="og:description" content="程式學習日誌、技術研究分享">
+<meta property="og:description" content="解決 Android 系統字體影響布局問題 2017/10/31 於教育訓練後遇到的問題，某些使用者將系統預設字體設定為 [極大] ，或者其他導致佈局混亂的大小，導致某些功能無法正常使用(被遮掩)。  解決辦法是 Configuration 藉由取得系統Configuration以及其fontScale來做判斷，進而取得控制佈局的可能。 以下直接以程式碼作範例: 12345678910111213">
 <meta property="og:locale" content="zh-Hant-TW">
+<meta property="og:updated_time" content="2017-11-06T08:20:35.927Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="K.L. Developer Blog">
-<meta name="twitter:description" content="程式學習日誌、技術研究分享">
+<meta name="twitter:title" content="解決Android系統預設字體過大影響佈局問題">
+<meta name="twitter:description" content="解決 Android 系統字體影響布局問題 2017/10/31 於教育訓練後遇到的問題，某些使用者將系統預設字體設定為 [極大] ，或者其他導致佈局混亂的大小，導致某些功能無法正常使用(被遮掩)。  解決辦法是 Configuration 藉由取得系統Configuration以及其fontScale來做判斷，進而取得控制佈局的可能。 以下直接以程式碼作範例: 12345678910111213">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -56,7 +58,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Archives: 2017/11 | K.L. Developer Blog</title>
+<title>解決Android系統預設字體過大影響佈局問題 | K.L. Developer Blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -66,8 +68,8 @@
         fancybox: true,
         animate: true,
         isHome: false,
-        isPost: false,
-        isArchive: true,
+        isPost: true,
+        isArchive: false,
         isTag: false,
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
@@ -250,393 +252,186 @@
     </div>
     <link class="menu-list" tags="標籤" friends="友情鏈接" about="關於我"/>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-解決Android系統預設字體過大影響佈局問題" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/Facebook-Account-Kit-Use-Guide/" class="archive-article-date">
-      <time datetime="2017-11-06T08:09:24.000Z" itemprop="datePublished">11-06</time>
+    <div class="article-meta">
+      <a href="/解決Android系統預設字體過大影響佈局問題/" class="article-date">
+      <time datetime="2017-11-06T08:07:26.000Z" itemprop="datePublished">2017-11-06</time>
 </a>
 
 
-        </div>
-         
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Facebook-Account-Kit-Use-Guide/">Facebook Account Kit Use Guide</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      解決Android系統預設字體過大影響佈局問題
     </h1>
   
 
-        <div class="article-info info-on-archive">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
     <div class="article-category tagcloud">
     <a class="article-category-link" href="/categories/Android/">Android</a>
     </div>
 
 
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Facebook/">Facebook</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/解決Android系統預設字體過大影響佈局問題/" class="archive-article-date">
-      <time datetime="2017-11-06T08:07:26.000Z" itemprop="datePublished">11-06</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/解決Android系統預設字體過大影響佈局問題/">解決Android系統預設字體過大影響佈局問題</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Android/">Android</a>
-    </div>
-
-
-          
+        
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fontsize/">fontsize</a></li></ul>
     </div>
 
-        </div>
         <div class="clearfix"></div>
-    </header>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="解決-Android-系統字體影響布局問題"><a href="#解決-Android-系統字體影響布局問題" class="headerlink" title="解決 Android 系統字體影響布局問題"></a>解決 <strong>Android</strong> 系統字體影響布局問題</h2><blockquote>
+<p>2017/10/31 於教育訓練後遇到的問題，某些使用者將系統預設字體設定為<strong> [極大] </strong>，或者其他導致佈局混亂的大小，導致某些功能無法正常使用(被遮掩)。</p>
+</blockquote>
+<h3 id="解決辦法是-Configuration"><a href="#解決辦法是-Configuration" class="headerlink" title="解決辦法是 Configuration"></a>解決辦法是 <code>Configuration</code></h3><ul>
+<li>藉由取得系統<code>Configuration</code>以及其<code>fontScale</code>來做判斷，進而取得控制佈局的可能。</li>
+<li><p>以下直接以程式碼作範例:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">Configuration configuration = getResources().getConfiguration();</div><div class="line">    Resources res = getResources();</div><div class="line">    <span class="keyword">if</span>(configuration.fontScale&gt;=<span class="number">1.35</span>)</div><div class="line">    &#123;</div><div class="line">        Configuration newconfig = <span class="keyword">new</span> Configuration();</div><div class="line">        newconfig.setToDefaults();</div><div class="line">        newconfig.fontScale=<span class="number">1.2f</span>;</div><div class="line">        res.updateConfiguration(newconfig,res.getDisplayMetrics());</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">/*</span></div><div class="line">    *    fontScale = 1f (正常)</div><div class="line">    *    fontScale = 1.2f (大)</div><div class="line">    *    fontScale = 1.35f (極大)</div><div class="line">    */</div></pre></td></tr></table></figure>
+</li>
+<li><p>在<code>if</code>判斷式中我設定為大於<code>1.35</code>就進行縮小<code>Scale</code>的行為，主要是因為當<code>Scale</code>大於<code>1.35</code>時，我的佈局會產生影響使用者體驗的問題，所以判斷式成立後，就直接將<code>Scale</code>縮小至<code>1.2</code>倍，如此即解決該問題。</p>
+</li>
+</ul>
+
+      
+    </div>
+    
   </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文標題:</span><a href="/解決Android系統預設字體過大影響佈局問題/">解決Android系統預設字體過大影響佈局問題</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主頁">KuanLin</a></p>
+        <p><span>發布時間:</span>2017-11-06, 16:07:26</p>
+        <p><span>最後更新:</span>2017-11-06, 16:20:35</p>
+        <p>
+            <span>原始鏈接:</span><a class="post-url" href="/解決Android系統預設字體過大影響佈局問題/" title="解決Android系統預設字體過大影響佈局問題">https://cheankumio.github.io/解決Android系統預設字體過大影響佈局問題/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://cheankumio.github.io/解決Android系統預設字體過大影響佈局問題/　　作者: KuanLin" title="點擊複製文章鏈接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>許可協議:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"姓名標示-非商業性-相同方式分享 4.0 國際"</a> 轉載請保留原文鏈接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/Facebook-Account-Kit-Use-Guide/">
+                    Facebook Account Kit Use Guide
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/Bitmap占用記憶體計算/">
+                    Bitmap占用記憶體計算
+                </a>
+            </div>
+        
+    </nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/Bitmap占用記憶體計算/" class="archive-article-date">
-      <time datetime="2017-11-06T08:03:22.000Z" itemprop="datePublished">11-06</time>
-</a>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目錄</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#解決-Android-系統字體影響布局問題"><span class="toc-number">1.</span> <span class="toc-text">解決 Android 系統字體影響布局問題</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#解決辦法是-Configuration"><span class="toc-number">1.1.</span> <span class="toc-text">解決辦法是 Configuration</span></a></li></ol></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隱藏目錄"  title="點擊按鈕隱藏或者顯示文章目錄">
+
+    <script>
+        yiliaConfig.toc = ["隱藏目錄", "顯示目錄", !!"false"];
+    </script>
 
 
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
         </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Bitmap占用記憶體計算/">Bitmap占用記憶體計算</a>
-    </h1>
-  
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"解決Android系統預設字體過大影響佈局問題　| K.L. Developer Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
 
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Android/">Android</a>
+    
+</div>
+
+
+
+
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/Facebook-Account-Kit-Use-Guide/" title="上一篇: Facebook Account Kit Use Guide">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/Bitmap占用記憶體計算/" title="下一篇: Bitmap占用記憶體計算">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
     </div>
 
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bitmap/">Bitmap</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/memory/">memory</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/Fragment-EvenBus/" class="archive-article-date">
-      <time datetime="2017-11-06T07:58:47.000Z" itemprop="datePublished">11-06</time>
-</a>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/Facebook-Account-Kit-Use-Guide/">Facebook Account Kit Use Guide</a></li><li class="post-list-item"><a class="post-list-link" href="/解決Android系統預設字體過大影響佈局問題/">解決Android系統預設字體過大影響佈局問題</a></li><li class="post-list-item"><a class="post-list-link" href="/Bitmap占用記憶體計算/">Bitmap占用記憶體計算</a></li><li class="post-list-item"><a class="post-list-link" href="/Fragment-EvenBus/">Fragment & EvenBus</a></li><li class="post-list-item"><a class="post-list-link" href="/Volley-use-guide/">Volley use guide</a></li><li class="post-list-item"><a class="post-list-link" href="/onItemClickListener-for-RecyclerView/">onItemClickListener for RecyclerView</a></li><li class="post-list-item"><a class="post-list-link" href="/PopupWindow/">PopupWindow</a></li><li class="post-list-item"><a class="post-list-link" href="/How-to-use-RecyclerView/">How to use RecyclerView</a></li><li class="post-list-item"><a class="post-list-link" href="/Control-widget-position/">Control widget position</a></li><li class="post-list-item"><a class="post-list-link" href="/Button-Style-Design/">Button Style Design</a></li><li class="post-list-item"><a class="post-list-link" href="/RxJava-Thread-Control/">RxJava_Thread_Control</a></li><li class="post-list-item"><a class="post-list-link" href="/RxJava/">RxJava</a></li><li class="post-list-item"><a class="post-list-link" href="/MyFirstPost/">MyFirstPost</a></li><li class="post-list-item"><a class="post-list-link" href="/hello-world/">Hello World</a></li></ul>
 
 
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Fragment-EvenBus/">Fragment &amp; EvenBus</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Android/">Android</a>
-    </div>
 
 
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/EvenBus/">EvenBus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Fragment/">Fragment</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/Volley-use-guide/" class="archive-article-date">
-      <time datetime="2017-11-06T07:41:39.000Z" itemprop="datePublished">11-06</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Volley-use-guide/">Volley use guide</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Android/">Android</a>
-    </div>
-
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Volley/">Volley</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/onItemClickListener-for-RecyclerView/" class="archive-article-date">
-      <time datetime="2017-11-06T07:39:39.000Z" itemprop="datePublished">11-06</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/onItemClickListener-for-RecyclerView/">onItemClickListener for RecyclerView</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Android/">Android</a>
-    </div>
-
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Interface/">Interface</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RecyclerView/">RecyclerView</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/PopupWindow/" class="archive-article-date">
-      <time datetime="2017-11-06T07:37:23.000Z" itemprop="datePublished">11-06</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/PopupWindow/">PopupWindow</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Android/">Android</a>
-    </div>
-
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PopupWindow/">PopupWindow</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/How-to-use-RecyclerView/" class="archive-article-date">
-      <time datetime="2017-11-06T07:26:05.000Z" itemprop="datePublished">11-06</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/How-to-use-RecyclerView/">How to use RecyclerView</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Android/">Android</a>
-    </div>
-
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RecyclerView/">RecyclerView</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/Control-widget-position/" class="archive-article-date">
-      <time datetime="2017-11-06T07:24:38.000Z" itemprop="datePublished">11-06</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Control-widget-position/">Control widget position</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Android/">Android</a>
-    </div>
-
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Animation/">Animation</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/Button-Style-Design/" class="archive-article-date">
-      <time datetime="2017-11-06T07:22:23.000Z" itemprop="datePublished">11-06</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Button-Style-Design/">Button Style Design</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Android/">Android</a>
-    </div>
-
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Button/">Button</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Design/">Design</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">
