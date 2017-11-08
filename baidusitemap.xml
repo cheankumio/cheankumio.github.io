@@ -3,6 +3,31 @@
 
 
     
+    
+  <url>
+    <loc>https://cheankumio.github.io/Fragment-EvenBus/</loc>
+    <lastmod>2017-11-08T07:17:43.097Z</lastmod>
+    <data>
+        <display>
+        <title>Fragment & EventBus</title>
+        <pubTime>2017-11-06T07:58:47.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>Fragment</tag>
+         
+        <tag>EventBus</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="https://cheankumio.github.io/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>https://cheankumio.github.io/PopupWindow/</loc>
     <lastmod>2017-11-06T08:24:34.751Z</lastmod>
@@ -82,30 +107,6 @@
         <tag>Android</tag>
          
         <tag>fontsize</tag>
-         
-         
-           
-             
-              <breadCrumb title="Android" url="https://cheankumio.github.io/categories/Android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://cheankumio.github.io/Fragment-EvenBus/</loc>
-    <lastmod>2017-11-06T08:20:23.064Z</lastmod>
-    <data>
-        <display>
-        <title>Fragment & EvenBus</title>
-        <pubTime>2017-11-06T07:58:47.000Z</pubTime>
-        
-        <tag>Android</tag>
-         
-        <tag>Fragment</tag>
-         
-        <tag>EvenBus</tag>
          
          
            
@@ -289,7 +290,6 @@
     </data>
     </url>
 
-    
     
     
   <url>
