@@ -3,6 +3,28 @@
 
 
     
+  <url>
+    <loc>https://cheankumio.github.io/HexoPost/</loc>
+    <lastmod>2018-03-06T00:39:04.210Z</lastmod>
+    <data>
+        <display>
+        <title>Hexo 操作指令</title>
+        <pubTime>2018-03-06T00:25:28.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+        <tag>Blog</tag>
+         
+         
+           
+             
+              <breadCrumb title="Hexo" url="https://cheankumio.github.io/categories/Hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>https://cheankumio.github.io/Fragment-EvenBus/</loc>
@@ -52,7 +74,7 @@
     
   <url>
     <loc>https://cheankumio.github.io/onItemClickListener-for-RecyclerView/</loc>
-    <lastmod>2017-11-06T08:22:31.197Z</lastmod>
+    <lastmod>2017-11-06T08:22:31.198Z</lastmod>
     <data>
         <display>
         <title>onItemClickListener for RecyclerView</title>
@@ -76,7 +98,7 @@
     
   <url>
     <loc>https://cheankumio.github.io/Volley-use-guide/</loc>
-    <lastmod>2017-11-06T08:21:41.109Z</lastmod>
+    <lastmod>2017-11-06T08:21:41.110Z</lastmod>
     <data>
         <display>
         <title>Volley use guide</title>
@@ -98,7 +120,7 @@
     
   <url>
     <loc>https://cheankumio.github.io/%E8%A7%A3%E6%B1%BAAndroid%E7%B3%BB%E7%B5%B1%E9%A0%90%E8%A8%AD%E5%AD%97%E9%AB%94%E9%81%8E%E5%A4%A7%E5%BD%B1%E9%9F%BF%E4%BD%88%E5%B1%80%E5%95%8F%E9%A1%8C/</loc>
-    <lastmod>2017-11-06T08:20:35.927Z</lastmod>
+    <lastmod>2017-11-06T08:20:35.928Z</lastmod>
     <data>
         <display>
         <title>解決Android系統預設字體過大影響佈局問題</title>
@@ -120,7 +142,7 @@
     
   <url>
     <loc>https://cheankumio.github.io/Bitmap%E5%8D%A0%E7%94%A8%E8%A8%98%E6%86%B6%E9%AB%94%E8%A8%88%E7%AE%97/</loc>
-    <lastmod>2017-11-06T08:19:09.647Z</lastmod>
+    <lastmod>2017-11-06T08:19:09.648Z</lastmod>
     <data>
         <display>
         <title>Bitmap占用記憶體計算</title>
@@ -144,7 +166,7 @@
     
   <url>
     <loc>https://cheankumio.github.io/Facebook-Account-Kit-Use-Guide/</loc>
-    <lastmod>2017-11-06T08:17:19.522Z</lastmod>
+    <lastmod>2017-11-06T08:17:19.523Z</lastmod>
     <data>
         <display>
         <title>Facebook Account Kit Use Guide</title>
@@ -166,7 +188,7 @@
     
   <url>
     <loc>https://cheankumio.github.io/Button-Style-Design/</loc>
-    <lastmod>2017-11-06T07:52:43.604Z</lastmod>
+    <lastmod>2017-11-06T07:52:43.605Z</lastmod>
     <data>
         <display>
         <title>Button Style Design</title>
@@ -190,7 +212,7 @@
     
   <url>
     <loc>https://cheankumio.github.io/Control-widget-position/</loc>
-    <lastmod>2017-11-06T07:50:44.829Z</lastmod>
+    <lastmod>2017-11-06T07:50:44.830Z</lastmod>
     <data>
         <display>
         <title>Control widget position</title>
@@ -212,7 +234,7 @@
     
   <url>
     <loc>https://cheankumio.github.io/How-to-use-RecyclerView/</loc>
-    <lastmod>2017-11-06T07:47:24.249Z</lastmod>
+    <lastmod>2017-11-06T07:47:24.250Z</lastmod>
     <data>
         <display>
         <title>How to use RecyclerView</title>
@@ -294,11 +316,11 @@
     
   <url>
     <loc>https://cheankumio.github.io/hello-world/</loc>
-    <lastmod>2017-07-20T06:18:47.734Z</lastmod>
+    <lastmod>2017-07-20T06:18:47.735Z</lastmod>
     <data>
         <display>
         <title>Hello World</title>
-        <pubTime>2017-07-20T06:18:47.734Z</pubTime>
+        <pubTime>2017-07-20T06:18:47.735Z</pubTime>
         
          
            

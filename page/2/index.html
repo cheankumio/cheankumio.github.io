@@ -187,7 +187,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Animation/">Animation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bitmap/">Bitmap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Button/">Button</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Design/">Design</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/EventBus/">EventBus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Facebook/">Facebook</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Fragment/">Fragment</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Interface/">Interface</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PopupWindow/">PopupWindow</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RecyclerView/">RecyclerView</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RxJava/">RxJava</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Volley/">Volley</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fontsize/">fontsize</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/memory/">memory</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Animation/">Animation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bitmap/">Bitmap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Blog/">Blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Button/">Button</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Design/">Design</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/EventBus/">EventBus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Facebook/">Facebook</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Fragment/">Fragment</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Interface/">Interface</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PopupWindow/">PopupWindow</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RecyclerView/">RecyclerView</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RxJava/">RxJava</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Volley/">Volley</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fontsize/">fontsize</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/memory/">memory</a></li></ul>
                     </div>
                 </section>
                 
@@ -257,6 +257,87 @@
     <link class="menu-list" tags="標籤" friends="友情鏈接" about="關於我"/>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-Button-Style-Design" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/Button-Style-Design/" class="article-date">
+      <time datetime="2017-11-06T07:22:23.000Z" itemprop="datePublished">2017-11-06</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/Button-Style-Design/">Button Style Design</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="Button-按鈕設計"><a href="#Button-按鈕設計" class="headerlink" title="Button 按鈕設計"></a>Button 按鈕設計</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">selector</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">item</span> <span class="attr">android:drawable</span>=<span class="string">"@color/filters_buttons_selected"</span> <span class="attr">android:state_pressed</span>=<span class="string">"true"</span> /&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">item</span> <span class="attr">android:drawable</span>=<span class="string">"@color/filters_buttons"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">selector</span>&gt;</span></div></pre></td></tr></table></figure>
+<p><code>android:state_pressed=&quot;true&quot;</code> 屬性是按下後的顏色變化<br><img src="https://cheankumio.gitbooks.io/kenny-code/content/assets/20170822_101548.gif" alt=""></p>
+<p>這樣就可以幫按鈕添加自訂色彩，如果使用的是imageButton<br>可以在<code>android:src=&quot; ... &quot;</code>設定圖片資源，即可設計出簡單美觀的自訂按鈕</p>
+<hr>
+<h3 id="設定圓角"><a href="#設定圓角" class="headerlink" title="設定圓角"></a>設定圓角</h3><blockquote>
+<p>如果要設定圓角及其他特效，就不能直接於<code>item</code>之後設定<code>android:drawable=&quot;xx&quot;</code>，否則其他設定都會被這個顏色給覆蓋。</p>
+</blockquote>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">selector</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span>&gt;</span></div><div class="line">	<span class="comment">&lt;!-- 按下後的狀態 --&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">item</span> <span class="attr">android:state_pressed</span>=<span class="string">"true"</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">shape</span> <span class="attr">android:shape</span>=<span class="string">"rectangle"</span>&gt;</span></div><div class="line">			<span class="comment">&lt;!-- 該按鈕按下後的顏色 --&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">solid</span> <span class="attr">android:color</span>=<span class="string">"@color/dred"</span>/&gt;</span></div><div class="line">			<span class="comment">&lt;!-- 圓角呈度 --&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">corners</span> <span class="attr">android:radius</span>=<span class="string">"30dp"</span> /&gt;</span></div><div class="line">			<span class="comment">&lt;!-- 邊框寬度和顏色 --&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">stroke</span> <span class="attr">android:width</span>=<span class="string">"2dp"</span> <span class="attr">android:color</span>=<span class="string">"#538394"</span> /&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">shape</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">item</span>&gt;</span></div><div class="line"></div><div class="line">	<span class="comment">&lt;!-- 預設的狀態 --&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">item</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">shape</span> <span class="attr">android:shape</span>=<span class="string">"rectangle"</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">corners</span> <span class="attr">android:radius</span>=<span class="string">"30dp"</span> /&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">solid</span> <span class="attr">android:color</span>=<span class="string">"@color/fred"</span>/&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">stroke</span> <span class="attr">android:width</span>=<span class="string">"2dp"</span> <span class="attr">android:color</span>=<span class="string">"#538394"</span> /&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">shape</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">item</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">selector</span>&gt;</span></div></pre></td></tr></table></figure>
+<p><strong> 實現效果 </strong></p>
+<p><img src="https://cheankumio.gitbooks.io/kenny-code/content/assets/20170822_104509.gif" alt=""></p>
+<hr>
+<h3 id="設定圓型Button及漸層色彩"><a href="#設定圓型Button及漸層色彩" class="headerlink" title="設定圓型Button及漸層色彩"></a>設定圓型Button及漸層色彩</h3><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</div><div class="line">&lt;selector xmlns:android="http://schemas.android.com/apk/res/android"&gt;</div><div class="line">	&lt;item android:state_pressed="true"&gt;</div><div class="line">		&lt;!-- 設定為圓型型狀 shape="oval" --&gt;</div><div class="line">		&lt;shape android:shape="oval"&gt;</div><div class="line">			&lt;!-- 起始色彩為 #0A9BCD --&gt;</div><div class="line">			&lt;gradient android:startColor="#0A9BCD"</div><div class="line">			&lt;!-- 最終色彩為 #083B4D--&gt;</div><div class="line">			android:endColor="#083B4D"</div><div class="line">			&lt;!-- 漸層半徑 --&gt;</div><div class="line">			android:gradientRadius="60dp"</div><div class="line">			&lt;!-- 漸層模式 --&gt;</div><div class="line">			android:type="radial"/&gt;</div><div class="line">			&lt;corners android:radius="30dp" /&gt;</div><div class="line">			&lt;stroke android:width="2dp" android:color="@color/strokec" /&gt;</div><div class="line">		&lt;/shape&gt;</div><div class="line">	&lt;/item&gt;</div><div class="line"></div><div class="line">	&lt;item &gt;</div><div class="line">		&lt;shape android:shape="oval"&gt;</div><div class="line">			&lt;corners android:radius="10dp" /&gt;</div><div class="line">			&lt;solid android:color="#0A9BCD"/&gt;</div><div class="line">			&lt;stroke android:width="2dp" android:color="@color/strokec" /&gt;</div><div class="line">		&lt;/shape&gt;</div><div class="line">	&lt;/item&gt;</div><div class="line">&lt;/selector&gt;</div></pre></td></tr></table></figure>
+<p><strong> 實現效果 </strong></p>
+<p><img src="https://cheankumio.gitbooks.io/kenny-code/content/assets/20170822_105739.gif" alt=""></p>
+<hr>
+<h3 id="交叉使用"><a href="#交叉使用" class="headerlink" title="交叉使用"></a>交叉使用</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">selector</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">item</span> <span class="attr">android:state_pressed</span>=<span class="string">"true"</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">shape</span> <span class="attr">android:shape</span>=<span class="string">"oval"</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">gradient</span> <span class="attr">android:startColor</span>=<span class="string">"#0A9BCD"</span></span></div><div class="line">				<span class="attr">android:endColor</span>=<span class="string">"#083B4D"</span></div><div class="line">				<span class="attr">android:gradientRadius</span>=<span class="string">"60dp"</span></div><div class="line">				<span class="attr">android:type</span>=<span class="string">"radial"</span>/&gt;</div><div class="line">			<span class="tag">&lt;<span class="name">stroke</span> <span class="attr">android:width</span>=<span class="string">"2dp"</span> <span class="attr">android:color</span>=<span class="string">"@color/strokec"</span> /&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">shape</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">item</span>&gt;</span></div><div class="line"></div><div class="line">	<span class="tag">&lt;<span class="name">item</span> &gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">shape</span> <span class="attr">android:shape</span>=<span class="string">"rectangle"</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">corners</span> <span class="attr">android:radius</span>=<span class="string">"20dp"</span> /&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">solid</span> <span class="attr">android:color</span>=<span class="string">"#0A9BCD"</span>/&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">stroke</span> <span class="attr">android:width</span>=<span class="string">"2dp"</span> <span class="attr">android:color</span>=<span class="string">"@color/strokec"</span> /&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">shape</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">item</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">selector</span>&gt;</span></div></pre></td></tr></table></figure>
+<p><strong> 實現效果 </strong></p>
+<p><img src="https://cheankumio.gitbooks.io/kenny-code/content/assets/20170822_110918.gif" alt=""></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Android/">Android</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Button/">Button</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Design/">Design</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-RxJava-Thread-Control" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -465,7 +546,7 @@
   
     <div class="article-meta">
       <a href="/hello-world/" class="article-date">
-      <time datetime="2017-07-20T06:18:47.734Z" itemprop="datePublished">2017-07-20</time>
+      <time datetime="2017-07-20T06:18:47.735Z" itemprop="datePublished">2017-07-20</time>
 </a>
 
 
@@ -536,7 +617,7 @@
         <div id="footer-info">
             <div class="footer-left">
                 <i class="fa fa-copyright"></i> 
-                2017 KuanLin
+                2017-2018 KuanLin
             </div>
             <div class="footer-right">
                 <a href="http://hexo.io/" target="_blank" title="快速、簡單且強大的網誌框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="簡而不減 Hexo 雙欄網誌主題  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
